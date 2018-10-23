@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+apply from: 'ntko-office-sdk.gradle'
+
+android {
+    compileSdkVersion 27
+
+    defaultConfig {
+        applicationId "com.ysbd.beijing"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 25
+        versionName "1.3.5"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+        }
+    }
+
+    lintOptions {
+
+        checkReleaseBuilds false
+
+        abortOnError false
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            // 为当前的 APP 设定独立的调用名称，这样可以支持在一台设备上面同时使用多个集成了sdk的应用
+            manifestPlaceholders = [officeClientName: "com.ysbd.beijing.OfficeApiClientId_RELEASE", officeAgentName: "com.ysbd.beijing.OfficeApiAgentId_RELEASE"]
+
+        }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // 为当前的 APP 设定独立的调用名称，这样可以支持在一台设备上面同时使用多个集成了sdk的应用
+            manifestPlaceholders = [officeClientName: "com.ysbd.beijing.OfficeApiClientId_DEBUG", officeAgentName: "com.ysbd.beijing.OfficeApiAgentId_DEBUG"]
+
+        }
+    }
+
+}
+
+
+
+
+dependencies {
+    configurations {
+//        all*.exclude group: 'com.android.support', module: 'support-v13'
+        all*.exclude group: 'com.squareup.okhttp3', module: 'okhttp'
+    }
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.google.code.gson:gson:2.7'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation files('libs/ksoap2-android-assembly-3.6.2-jar-with-dependencies.jar')
+    implementation files('libs/android-xml-json.jar')
+    //    implementation 'com.squareup.okhttp3:okhttp:3.5.0'
+    //    implementation 'com.squareup.okio:okio:1.5.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.zhy.base:fileprovider:1.0.0'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    compile 'com.cjj.materialrefeshlayout:library:1.3.0'
+    compile 'com.github.Awent:PhotoPick-Master:v1.095'
+    implementation files('libs/tbs_sdk_thirdapp_v3.1.0.1034_43100_sharewithdownload_obfs_20170301_182143.jar')
+    compile 'com.pgyersdk:sdk:2.8.4'
+    implementation 'cn.lsmya.apkupdate:apkupdate:1.0.5'
+    implementation project(':indexlib')
+}

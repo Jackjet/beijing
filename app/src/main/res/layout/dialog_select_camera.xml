@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dimen5">
+
+        <TextView
+            android:id="@+id/dialogSelectCamera_camera"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen45"
+            android:background="@drawable/shape_while_top_20"
+            android:gravity="center"
+            android:text="选择文件"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen15" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen1"
+            android:background="@color/viewColor" />
+
+        <TextView
+            android:id="@+id/dialogSelectCamera_album"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen45"
+            android:background="@drawable/shape_while_bottom_20"
+            android:gravity="center"
+            android:text="选择照片"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen15" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen10"
+            android:background="@color/transparent2" />
+
+        <TextView
+            android:id="@+id/dialogSelectCamera_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen45"
+            android:background="@drawable/shape_while_20"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/red"
+            android:textSize="@dimen/dimen15" />
+    </LinearLayout>
+</LinearLayout>

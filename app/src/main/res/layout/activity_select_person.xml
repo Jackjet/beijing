@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_select_person"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen48"
+        android:background="@color/colorPrimaryDark">
+        <FrameLayout
+            android:id="@+id/fl_back"
+            android:layout_alignParentLeft="true"
+            android:layout_width="@dimen/dimen48"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="@dimen/dimen20"
+                android:layout_height="@dimen/dimen20"
+                android:src="@mipmap/back"/>
+        </FrameLayout>
+
+        <TextView
+            android:layout_toRightOf="@id/fl_back"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/tvTitleWhite"
+            android:textSize="@dimen/dimen16"
+            android:gravity="center"
+            android:text="选择人员"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/tvTitleWhite"
+            android:textSize="@dimen/dimen15"
+            android:gravity="center"
+            android:text="确定"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/textView4" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listview"
+        android:background="@color/btLightGrey"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+</LinearLayout>

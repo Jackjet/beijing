@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen48"
+        android:orientation="horizontal"
+        android:background="@color/mTheme">
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="@dimen/dimen48"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <ImageView
+
+                android:layout_width="@dimen/dimen24"
+                android:layout_height="@dimen/dimen24"
+                android:src="@mipmap/back"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="@dimen/dimen18"
+            android:textColor="@color/white"
+            />
+        <FrameLayout
+            android:id="@+id/flAdd"
+            android:layout_width="@dimen/dimen48"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+        </FrameLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/llRoot">
+
+        </LinearLayout>
+        <FrameLayout
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="@dimen/dimen80"
+            android:layout_height="@dimen/dimen80">
+            <FrameLayout
+                android:id="@+id/fl_edit"
+                android:layout_width="@dimen/dimen60"
+                android:layout_height="@dimen/dimen60"
+                android:layout_gravity="center"
+                android:background="@drawable/bt_oval">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/dimen30"
+                    android:layout_height="@dimen/dimen30"
+                    android:src="@mipmap/pen"/>
+            </FrameLayout>
+
+        </FrameLayout>
+    </RelativeLayout>
+
+</LinearLayout>

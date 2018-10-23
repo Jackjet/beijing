@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dimen1">
+
+            <TextView
+                android:id="@+id/user"
+                android:layout_width="0dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimen1"
+                android:layout_weight="1"
+                android:paddingBottom="@dimen/dimen2"
+                android:paddingTop="@dimen/dimen2"
+                android:singleLine="true"
+                android:text="上传人"
+                android:textColor="#000"
+                android:textSize="@dimen/dimen13" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimen1"
+                android:layout_weight="2"
+                android:padding="@dimen/dimen2"
+                android:text="标题"
+                android:textColor="#000"
+                android:singleLine="true"
+                android:textSize="@dimen/dimen13" />
+
+            <TextView
+                android:id="@+id/extension"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimen1"
+                android:layout_weight="0.7"
+                android:padding="@dimen/dimen2"
+                android:singleLine="true"
+                android:text="扩展名称"
+                android:textColor="#000"
+                android:textSize="@dimen/dimen13" />
+
+            <TextView
+                android:id="@+id/depart"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimen1"
+                android:layout_weight="1"
+                android:padding="@dimen/dimen2"
+                android:text="部门名称"
+                android:textColor="#000"
+                android:textSize="@dimen/dimen13" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/dimen2"
+                android:text="上传时间"
+                android:textColor="#000"
+                android:textSize="@dimen/dimen13" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

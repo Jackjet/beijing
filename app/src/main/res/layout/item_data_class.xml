@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/item_data_class_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen30"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="主办文"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/dimen14" />
+
+</RelativeLayout>

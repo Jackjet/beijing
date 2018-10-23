@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/yibanfawen_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ddd">
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="序号"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/tv_nian"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="年"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/tv_hao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="文号"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/tv_biaoti"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_gravity="center"
+            android:layout_weight="10"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="标题"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/tv_chushizi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="处室字"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/tv_chushihao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_gravity="center"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="处室号"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/tv_nigaoren"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="拟稿人"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/tv_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_gravity="center"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="当前办理人"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/tv_nigaoriqi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="拟稿日期"
+            android:visibility="visible"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/tv_xianbanriqi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="限办日期"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_zhongdianducha1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_gravity="center"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="重点督查"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13"
+            android:visibility="gone"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4"
+            android:visibility="gone"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_shifoufawen1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_gravity="center"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="是否发文"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#b4b4b4" />
+</LinearLayout>

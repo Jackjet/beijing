@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/item_todo_status"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen36"
+            android:layout_weight="3"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/dimen36"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/item_todo_code"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen36"
+            android:layout_weight="2"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="序号"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/dimen36"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/item_todo_number"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen36"
+            android:layout_weight="3"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/dimen36"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/item_todo_time"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen36"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/dimen36"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/item_todo_maxTime"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen36"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/dimen36"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/item_todo_unit"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen36"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/dimen36"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/item_todo_textNumber"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen36"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/dimen36"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/item_todo_title"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen36"
+            android:layout_weight="8"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/dimen36"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/item_todo_host"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen36"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/dimen36"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/item_todo_user"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen36"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/dimen36"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/item_todo_ducha"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen36"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="重点督查"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/dimen36"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/item_todo_isSend"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen36"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="是否发文"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#b4b4b4" />
+</LinearLayout>

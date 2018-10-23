@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen15">
+
+        <EditText
+            android:id="@+id/dialog_file_content"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen100"
+            android:layout_marginBottom="@dimen/dimen1"
+            android:background="@color/white"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:hint="请输入文件描述信息"
+            android:maxLines="3"
+            android:textSize="@dimen/dimen18"
+            android:padding="@dimen/dimen15" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen1">
+
+            <TextView
+                android:id="@+id/dialog_file_quxiao"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen45"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/mainColor"
+                android:textSize="@dimen/dimen17" />
+
+            <TextView
+                android:id="@+id/dialog_file_queding"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen45"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/mainColor"
+                android:textSize="@dimen/dimen17" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

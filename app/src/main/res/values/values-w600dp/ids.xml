@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="task_header_pager" type="id"></item>
+    <item name="calendar_header_pager" type="id"></item>
+</resources>

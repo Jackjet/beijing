@@ -1,0 +1,51 @@
+repositories{
+    jcenter()
+    flatDir{
+        dirs 'ntko-office-sdk'
+    }
+}
+
+android {
+    buildTypes {
+        release {
+            // 设定适用于HTML5/Cordova开发和接口中未传递序列号的情况
+            resValue "string", "SDKPDFSerialNumber", "462201843337"
+            resValue "string", "SDKWPSSerialNumber", "502192907720"
+            // 为当前的 APP 设定独立的调用名称，这样可以支持在一台设备上面同时使用多个集成了sdk的应用
+            manifestPlaceholders = [officeClientName: "your.company.xxx.anyUniqueString1", officeAgentName: "your.company.xxx.anyUniqueString2"]
+        }
+
+        debug {
+            // 设定适用于HTML5/Cordova开发和接口中未传递序列号的情况
+            resValue "string", "SDKPDFSerialNumber", "462201843337"
+            resValue "string", "SDKWPSSerialNumber", "502192907720"
+            // 为当前的 APP 设定独立的调用名称，这样可以支持在一台设备上面同时使用多个集成了sdk的应用
+            manifestPlaceholders = [officeClientName: "your.company.xxx.anyUniqueString3", officeAgentName: "your.company.xxx.anyUniqueString4"]
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:support-v13:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:preference-v14:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:palette-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.squareup.okhttp3:okhttp:3.9.1'
+    implementation 'com.google.code.gson:gson:2.8.4'
+
+    implementation(name:'office-library-release', ext:'aar')
+
+    // 解除注释以支持查看 TIFF 图片
+    // Android 本身是不支持查看 *.tif 文件的，具体可以在 Android 官网查看支持的格式列表：
+    // https://developer.android.com/guide/topics/media/media-formats.html
+    implementation 'com.github.beyka:androidtiffbitmapfactory:0.9.8.2'
+
+    // 解除注释以支持文件浏览器
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.android.support:support-vector-drawable:27.1.1'
+}

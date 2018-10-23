@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/itemComments"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen8" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dimen12"
+                android:paddingTop="@dimen/dimen2"
+                android:textColor="#241e27"
+                android:textSize="@dimen/dimen14" />
+            <TextView
+                android:id="@+id/tvParentName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dimen12"
+                android:paddingTop="@dimen/dimen2"
+                android:text="签署意见"
+                android:textColor="#241e27"
+                android:textSize="@dimen/dimen14" />
+
+            <FrameLayout
+                android:id="@+id/flAdd"
+                android:layout_width="@dimen/dimen50"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dimen12">
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:text="新建"-->
+                    <!--android:textColor="@color/mTheme"-->
+                    <!--android:textSize="@dimen/dimen14" />-->
+                <!---->
+                <ImageView
+                    android:layout_width="@dimen/dimen18"
+                    android:layout_height="@dimen/dimen18"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/pen125" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dimen4"
+        android:paddingRight="@dimen/dimen4">
+        <TextView
+            android:id="@+id/tvComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen6"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="#444"
+            android:textSize="@dimen/dimen14" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right">
+
+
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/dimen4"
+                android:gravity="center|bottom"
+                android:text=""
+                android:textSize="@dimen/dimen14" />
+
+            <ImageView
+                android:id="@+id/ivName"
+                android:layout_width="@dimen/dimen80"
+                android:layout_height="@dimen/dimen40"
+                android:layout_marginTop="@dimen/dimen12"
+                android:textSize="@dimen/dimen14"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/flEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen30"
+                android:layout_gravity="center"
+                android:paddingLeft="@dimen/dimen8"
+                android:paddingRight="@dimen/dimen8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="编辑"
+                    android:textColor="@color/mTheme"
+                    android:textSize="@dimen/dimen14" />
+                <!--<ImageView-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_width="@dimen/dimen20"-->
+                <!--android:layout_height="@dimen/dimen20"-->
+                <!--android:src="@mipmap/edit1"/>-->
+            </FrameLayout>
+
+            <View
+                android:id="@+id/tvLine"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dimen4"
+                android:layout_marginTop="@dimen/dimen4"
+                android:background="@color/holo_gray_bright" />
+
+            <FrameLayout
+                android:id="@+id/flDel"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen30"
+                android:layout_gravity="center"
+                android:paddingLeft="@dimen/dimen8"
+                android:paddingRight="@dimen/dimen8">
+                <!--<ImageView-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_width="@dimen/dimen20"-->
+                <!--android:layout_height="@dimen/dimen20"-->
+                <!--android:src="@mipmap/dele"/>-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="删除"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/dimen14" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="@dimen/dimen14" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="@dimen/dimen14" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen1"
+            android:background="@color/holo_gray_bright" />
+
+    </LinearLayout>
+</LinearLayout>

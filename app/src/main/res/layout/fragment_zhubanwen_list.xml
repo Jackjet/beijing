@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen28"
+        android:orientation="horizontal"
+        android:background="#696969"
+        android:padding="@dimen/dimen1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/dimen8"
+            android:paddingRight="@dimen/dimen2"
+            android:text="年"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="@dimen/dimen13"
+            android:background="#ccc"/>
+        <FrameLayout
+            android:layout_marginLeft="@dimen/dimen1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#fff">
+            <EditText
+                android:id="@+id/nian"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dimen2"
+                android:textSize="@dimen/dimen13"
+                android:text=""
+                android:background="@drawable/bg_strok_edit"/>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_marginLeft="@dimen/dimen1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#fff">
+            <EditText
+                android:id="@+id/hao"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dimen2"
+                android:textSize="@dimen/dimen13"
+                android:background="@drawable/bg_strok_edit"/>
+        </FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/dimen2"
+            android:paddingRight="@dimen/dimen2"
+            android:text="号"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="@dimen/dimen13"
+            android:background="#fff"/>
+        <TextView
+            android:layout_marginLeft="@dimen/dimen1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/dimen2"
+            android:paddingRight="@dimen/dimen2"
+            android:text="原文字号"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="@dimen/dimen13"
+            android:background="#ccc"/>
+        <FrameLayout
+            android:layout_marginLeft="@dimen/dimen1"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:background="#fff">
+            <EditText
+                android:id="@+id/wenhao"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dimen2"
+                android:textSize="@dimen/dimen13"
+                android:background="@drawable/bg_strok_edit"/>
+        </FrameLayout>
+        <TextView
+            android:layout_marginLeft="@dimen/dimen1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/dimen2"
+            android:paddingRight="@dimen/dimen2"
+            android:text="标题"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="@dimen/dimen13"
+            android:background="#ccc"/>
+        <FrameLayout
+            android:layout_marginLeft="@dimen/dimen1"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:background="#fff">
+            <EditText
+                android:id="@+id/biaoti"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dimen2"
+                android:textSize="@dimen/dimen13"
+                android:background="@drawable/bg_strok_edit"/>
+        </FrameLayout>
+        <TextView
+            android:layout_marginLeft="@dimen/dimen1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/dimen2"
+            android:paddingRight="@dimen/dimen2"
+            android:text="主办处室"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="@dimen/dimen13"
+            android:background="#ccc"/>
+        <FrameLayout
+
+            android:layout_marginLeft="@dimen/dimen1"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:background="#fff">
+            <EditText
+                android:id="@+id/zhubanchushi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dimen2"
+                android:textSize="@dimen/dimen13"
+                android:background="@drawable/bg_strok_edit"/>
+        </FrameLayout>
+        <TextView
+            android:layout_marginLeft="@dimen/dimen1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/dimen2"
+            android:paddingRight="@dimen/dimen2"
+            android:text="来文单位"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="@dimen/dimen13"
+            android:background="#ccc"/>
+        <FrameLayout
+            android:layout_marginLeft="@dimen/dimen1"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:background="#fff">
+            <EditText
+                android:id="@+id/laiwendanwei"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dimen2"
+                android:textSize="@dimen/dimen13"
+                android:background="@drawable/bg_strok_edit"/>
+        </FrameLayout>
+        <TextView
+            android:id="@+id/query"
+            android:layout_marginLeft="@dimen/dimen1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/dimen8"
+            android:paddingRight="@dimen/dimen8"
+            android:text="查询"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="@dimen/dimen13"
+            android:background="#ccc"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="#ddd">
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="序号"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_weight="2"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="流程"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_weight="5"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="标题"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/tv_task"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_weight="2.5"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="当前任务"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/tv_actor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_weight="2.5"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="前动作"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/tv_states"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_weight="2"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="状态"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_weight="2.5"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="接收时间"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#b4b4b4" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ddd">
+
+        <TextView
+            android:id="@+id/tv_num1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="序号"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/tv_hao1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="号"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/tv_laiwenriqi1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="来文日期"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/tv_xianbanriqi1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="限办日期"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/tv_laiwendanwei1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_gravity="center"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="来文单位"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/tv_yuanwenzihao1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="原文字号"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/tv_biaoti1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_gravity="center"
+            android:layout_weight="10"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="标题"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/tv_zhubanchushi1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="主办处室"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4" />
+
+        <TextView
+            android:id="@+id/tv_user1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="当前用户"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_zhongdianducha1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_gravity="center"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="重点督查"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13"
+            android:visibility="gone"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#b4b4b4"
+            android:visibility="gone"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_shifoufawen1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen4"
+            android:paddingBottom="@dimen/dimen4"
+            android:layout_gravity="center"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="是否发文"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen13" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#b4b4b4" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:id="@+id/ll_null"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dimen12"
+                android:text="未获取到相关信息"
+                android:textSize="@dimen/dimen24"
+                android:gravity="center_horizontal"/>
+
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen36"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/last"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_back_list"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="上一页"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/page"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="#3e9fef"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="1"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_next_list"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="下一页"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="数据加载中..."
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+</LinearLayout>

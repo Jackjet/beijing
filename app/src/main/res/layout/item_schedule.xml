@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/form_b_t">
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/form_b_t"
+            android:layout_weight="1"
+            android:padding="@dimen/dimen2"
+            android:text=" "
+            android:textSize="@dimen/dimen14"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/form_b_t"
+            android:layout_weight="3.5"
+            android:padding="@dimen/dimen2"
+            android:text=""
+            android:textSize="@dimen/dimen14"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/form_b_t"
+            android:layout_weight="3.5"
+            android:text=" "
+            android:padding="@dimen/dimen8"
+            android:paddingBottom="@dimen/dimen12"
+            android:textSize="@dimen/dimen14"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/tv_hoster"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/form_b_t"
+            android:layout_weight="1"
+            android:text=" "
+            android:textSize="@dimen/dimen14"
+            android:padding="@dimen/dimen2"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/tv_depart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/form_b_t"
+            android:layout_weight="2"
+
+            android:text=" "
+            android:textSize="@dimen/dimen14"
+            android:paddingLeft="@dimen/dimen8"
+            android:paddingRight="@dimen/dimen8"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/tv_remark"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/form_b_t"
+            android:layout_weight="1"
+            android:text=" "
+            android:textSize="@dimen/dimen14"
+            android:textColor="@color/colorPrimary"
+            android:padding="@dimen/dimen2"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,1170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dimen8">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen2"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/dimen8"
+                    android:text="北京市财政局发文稿纸"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/dimen20"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="@dimen/dimen62"
+                            android:layout_marginRight="@dimen/dimen62"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dimen36"
+                                android:gravity="center|right"
+                                android:minHeight="@dimen/dimen36"
+                                android:text="预登号"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/dimen14" />
+
+                            <TextView
+                                android:id="@+id/yudenghao"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4"
+                                android:background="#0000"
+                                android:gravity="center|left"
+                                android:hint=""
+                                android:minHeight="@dimen/dimen36"
+                                android:paddingLeft="@dimen/dimen2"
+                                android:textColor="@color/textColor"
+                                android:textSize="@dimen/dimen14" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dimen36"
+                                android:gravity="center|right"
+                                android:minHeight="@dimen/dimen36"
+                                android:text="处室排行号"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/dimen14" />
+
+                            <TextView
+                                android:id="@+id/type_hao"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="#0000"
+                                android:gravity="center"
+                                android:hint=""
+                                android:minHeight="@dimen/dimen36"
+                                android:minWidth="@dimen/dimen40"
+                                android:paddingLeft="@dimen/dimen2"
+                                android:textColor="@color/textColor"
+                                android:textSize="@dimen/dimen14" />
+
+
+                            <TextView
+                                android:id="@+id/hao"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="#0000"
+                                android:gravity="center"
+                                android:hint=""
+                                android:minHeight="@dimen/dimen36"
+                                android:paddingLeft="@dimen/dimen2"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/dimen14" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dimen36"
+                                android:gravity="center|left"
+                                android:hint=""
+                                android:minHeight="@dimen/dimen36"
+                                android:text="号"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/dimen14" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dimen60"
+                android:layout_marginRight="@dimen/dimen60"
+                android:background="@drawable/form_bored"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen05">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen30"
+                    android:background="@drawable/form_bored"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen05">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen30"
+                        android:layout_weight="3"
+                        android:background="#e4e9ff">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/dimen8"
+                            android:paddingRight="@dimen/dimen8"
+                            android:text="京财"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/dimen14" />
+
+                        <TextView
+                            android:id="@+id/type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="#e4e9ff"
+                            android:gravity="center"
+                            android:minWidth="@dimen/dimen40"
+                            android:textColor="@color/textColor" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="["
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/dimen14" />
+
+                        <TextView
+                            android:id="@+id/nian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="#e4e9ff"
+                            android:gravity="center"
+                            android:minWidth="@dimen/dimen40"
+                            android:textColor="@color/red" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="]"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/dimen14" />
+
+                        <TextView
+                            android:id="@+id/num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="#e4e9ff"
+                            android:gravity="center"
+                            android:minWidth="@dimen/dimen40"
+                            android:textColor="@color/red" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="号"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/dimen14" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="@dimen/dimen1"
+                        android:layout_height="match_parent"
+                        android:background="#e4e9ff" />
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <View
+                            android:layout_width="@dimen/dimen1"
+                            android:layout_height="match_parent"
+                            android:background="#ff0000" />
+
+                        <TextView
+                            style="@style/FormFieldsName2"
+                            android:text="密级" />
+
+                        <View
+                            android:layout_width="@dimen/dimen1"
+                            android:layout_height="match_parent"
+                            android:background="#ff0000" />
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/miji"
+                        style="@style/FormFieldsValue2"
+                        android:layout_weight="0.7"
+                        android:hint="" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8">
+
+                        <View
+                            android:layout_width="@dimen/dimen1"
+                            android:layout_height="match_parent"
+                            android:background="#ff0000" />
+
+                        <TextView
+                            style="@style/FormFieldsName2"
+                            android:text="保管期限" />
+
+                        <View
+                            android:layout_width="@dimen/dimen1"
+                            android:layout_height="match_parent"
+                            android:background="#ff0000" />
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/baoguanqixian"
+                        style="@style/FormFieldsValue2"
+                        android:layout_weight="0.5"
+                        android:hint="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_bored"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen05">
+
+                    <TextView
+                        style="@style/FormFieldsName2"
+                        android:text="信息发布" />
+
+                    <View
+                        android:layout_width="@dimen/dimen1"
+                        android:layout_height="match_parent"
+                        android:background="#ff0000" />
+
+                    <TextView
+                        android:id="@+id/xinxifabu"
+                        style="@style/FormFieldsValue2"
+                        android:layout_weight="2"
+                        android:hint="" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <View
+                            android:layout_width="@dimen/dimen1"
+                            android:layout_height="match_parent"
+                            android:background="#ff0000" />
+
+                        <TextView
+                            style="@style/FormFieldsName2"
+                            android:text="规范文件" />
+
+                        <View
+                            android:layout_width="@dimen/dimen1"
+                            android:layout_height="match_parent"
+                            android:background="#ff0000" />
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/guifanwenjian"
+                        style="@style/FormFieldsValue2"
+                        android:layout_weight="2"
+                        android:hint="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_bored"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen05">
+
+                    <TextView
+                        style="@style/FormFieldsName2"
+                        android:text="缓   急" />
+
+                    <View
+                        android:layout_width="@dimen/dimen1"
+                        android:layout_height="match_parent"
+                        android:background="#ff0000" />
+
+                    <TextView
+                        android:id="@+id/qicaochushi"
+                        style="@style/FormFieldsValue2"
+                        android:layout_weight="2"
+                        android:hint="" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <View
+                            android:layout_width="@dimen/dimen1"
+                            android:layout_height="match_parent"
+                            android:background="#ff0000" />
+
+                        <TextView
+                            style="@style/FormFieldsName2"
+                            android:text="限办日期" />
+
+                        <View
+                            android:layout_width="@dimen/dimen1"
+                            android:layout_height="match_parent"
+                            android:background="#ff0000" />
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/xianbanriqi"
+                        style="@style/FormFieldsValue2"
+                        android:layout_weight="2"
+                        android:hint="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_bored"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen05">
+
+                    <TextView
+                        style="@style/FormFieldsName2"
+                        android:layout_height="match_parent"
+                        android:text="信息公开属性" />
+
+                    <View
+                        android:layout_width="@dimen/dimen1"
+                        android:layout_height="match_parent"
+                        android:background="#ff0000" />
+
+                    <TextView
+                        android:id="@+id/gongkaishuxing"
+                        style="@style/FormFieldsValue2"
+                        android:layout_height="@dimen/dimen40"
+                        android:layout_weight="5"
+                        android:hint=""
+                        android:textColor="#0000ff" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_bored"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen05">
+
+                    <TextView
+                        style="@style/FormFieldsName2"
+                        android:minHeight="@dimen/dimen80"
+                        android:text="签发" />
+
+                    <View
+                        android:layout_width="@dimen/dimen1"
+                        android:layout_height="match_parent"
+                        android:background="#ff0000" />
+
+                    <com.ysbd.beijing.view.CommentLinearLayout
+                        android:id="@+id/cl_qianfa"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="#f4f9ff"
+                        android:minHeight="@dimen/dimen80"></com.ysbd.beijing.view.CommentLinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <View
+                            android:layout_width="@dimen/dimen1"
+                            android:layout_height="match_parent"
+                            android:background="#ff0000" />
+
+                        <TextView
+                            style="@style/FormFieldsName2"
+                            android:minHeight="@dimen/dimen80"
+                            android:text="会签" />
+
+                        <View
+                            android:layout_width="@dimen/dimen1"
+                            android:layout_height="match_parent"
+                            android:background="#ff0000" />
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/huiqian"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="#f4f9ff"
+                        android:minHeight="@dimen/dimen80"
+                        android:textColor="#ff0000"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_bored"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen05">
+
+                    <TextView
+                        style="@style/FormFieldsName2"
+                        android:minHeight="@dimen/dimen60"
+                        android:text="主任核稿" />
+
+                    <View
+                        android:layout_width="@dimen/dimen1"
+                        android:layout_height="match_parent"
+                        android:background="#ff0000" />
+
+                    <com.ysbd.beijing.view.CommentLinearLayout
+                        android:id="@+id/cl_zhurenhegao"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="#f4f9ff"
+                        android:minHeight="@dimen/dimen60"></com.ysbd.beijing.view.CommentLinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <View
+                            android:layout_width="@dimen/dimen1"
+                            android:layout_height="match_parent"
+                            android:background="#ff0000" />
+
+                        <TextView
+                            style="@style/FormFieldsName2"
+                            android:minHeight="@dimen/dimen60"
+                            android:text="秘书核稿" />
+
+                        <View
+                            android:layout_width="@dimen/dimen1"
+                            android:layout_height="match_parent"
+                            android:background="#ff0000" />
+
+                    </LinearLayout>
+
+
+                    <com.ysbd.beijing.view.CommentLinearLayout
+                        android:id="@+id/cl_mishuhegao"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="#f4f9ff"
+                        android:minHeight="@dimen/dimen60"></com.ysbd.beijing.view.CommentLinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_bored"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen05"
+
+                    android:visibility="visible">
+
+                    <TextView
+                        style="@style/FormFieldsName2"
+                        android:text="主送" />
+
+                    <View
+                        android:layout_width="@dimen/dimen1"
+                        android:layout_height="match_parent"
+                        android:background="#ff0000" />
+
+
+                    <TextView
+                        android:id="@+id/zhusong"
+                        style="@style/FormFieldsValue2"
+                        android:layout_weight="5"
+                        android:hint="" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_bored"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen05"
+
+                    android:visibility="visible">
+
+                    <TextView
+                        style="@style/FormFieldsName2"
+                        android:text="抄送" />
+
+                    <View
+                        android:layout_width="@dimen/dimen1"
+                        android:layout_height="match_parent"
+                        android:background="#ff0000" />
+
+
+                    <TextView
+                        android:id="@+id/chaosong"
+                        style="@style/FormFieldsValue2"
+                        android:layout_weight="5"
+                        android:hint="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen36"
+                    android:background="@drawable/form_bored"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen05"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#e4e9ff"
+                        android:gravity="center"
+                        android:text="拟稿处室："
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/dimen14" />
+
+                    <TextView
+                        android:id="@+id/nigaochushi"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#e4e9ff"
+                        android:gravity="center"
+                        android:minWidth="@dimen/dimen35"
+                        android:textColor="@color/textColor" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="#e4e9ff"
+                            android:gravity="center"
+                            android:text="拟稿人："
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/dimen14" />
+
+                        <TextView
+                            android:id="@+id/hegaoren"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#e4e9ff"
+                            android:gravity="center"
+                            android:minWidth="@dimen/dimen40"
+                            android:textColor="@color/textColor" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="#e4e9ff"
+                            android:gravity="center"
+                            android:text="电话："
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/dimen14" />
+
+                        <TextView
+                            android:id="@+id/dianhua"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#e4e9ff"
+                            android:gravity="center"
+                            android:minWidth="@dimen/dimen40"
+                            android:textColor="@color/textColor" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen36"
+                    android:background="@drawable/form_bored"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen05"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#e4e9ff"
+                        android:gravity="center"
+                        android:text="打字员："
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/dimen14" />
+
+                    <TextView
+                        android:id="@+id/daziyuan"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#e4e9ff"
+                        android:gravity="center"
+                        android:minWidth="@dimen/dimen35"
+                        android:textColor="@color/textColor" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="#e4e9ff"
+                            android:gravity="center"
+                            android:text="校对人："
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/dimen14" />
+
+                        <TextView
+                            android:id="@+id/jiaoduiren"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#e4e9ff"
+                            android:gravity="center"
+                            android:minWidth="@dimen/dimen40"
+                            android:textColor="@color/textColor" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="#e4e9ff"
+                            android:gravity="center"
+                            android:text="手机："
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/dimen14" />
+
+                        <TextView
+                            android:id="@+id/shouji"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#e4e9ff"
+                            android:gravity="center"
+                            android:minWidth="@dimen/dimen40"
+                            android:textColor="@color/textColor" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_bored"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen05">
+
+                    <TextView
+                        style="@style/FormFieldsName2"
+                        android:minHeight="@dimen/dimen60"
+                        android:text="处长核稿" />
+
+                    <View
+                        android:layout_width="@dimen/dimen1"
+                        android:layout_height="match_parent"
+                        android:background="#ff0000" />
+
+                    <com.ysbd.beijing.view.CommentLinearLayout
+                        android:id="@+id/cl_chuzhanghegao"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="#f4f9ff"
+                        android:minHeight="@dimen/dimen60"></com.ysbd.beijing.view.CommentLinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <View
+                            android:layout_width="@dimen/dimen1"
+                            android:layout_height="match_parent"
+                            android:background="#ff0000" />
+
+                        <TextView
+                            style="@style/FormFieldsName2"
+                            android:minHeight="@dimen/dimen60"
+                            android:text="处室核稿" />
+
+                        <View
+                            android:layout_width="@dimen/dimen1"
+                            android:layout_height="match_parent"
+                            android:background="#ff0000" />
+
+                    </LinearLayout>
+
+
+                    <com.ysbd.beijing.view.CommentLinearLayout
+                        android:id="@+id/cl_chushihegao"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="#f4f9ff"
+                        android:minHeight="@dimen/dimen60"></com.ysbd.beijing.view.CommentLinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_bored"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen05">
+
+                    <TextView
+                        style="@style/FormFieldsName2"
+                        android:layout_height="match_parent"
+                        android:text="办公室份数" />
+
+                    <View
+                        android:layout_width="@dimen/dimen1"
+                        android:layout_height="match_parent"
+                        android:background="#ff0000" />
+
+                    <TextView
+                        android:id="@+id/bangongshifenshu"
+                        style="@style/FormFieldsValue2"
+                        android:layout_weight="2"
+                        android:hint="" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <View
+                            android:layout_width="@dimen/dimen1"
+                            android:layout_height="match_parent"
+                            android:background="#ff0000" />
+
+                        <TextView
+                            style="@style/FormFieldsName2"
+                            android:text="处室份数" />
+
+                        <View
+                            android:layout_width="@dimen/dimen1"
+                            android:layout_height="match_parent"
+                            android:background="#ff0000" />
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/chushifenshu"
+                        style="@style/FormFieldsValue2"
+                        android:layout_weight="2"
+                        android:hint="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_bored"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen05"
+
+                    android:visibility="visible">
+
+                    <TextView
+                        style="@style/FormFieldsName2"
+                        android:text="标题" />
+
+                    <View
+                        android:layout_width="@dimen/dimen1"
+                        android:layout_height="match_parent"
+                        android:background="#ff0000" />
+
+                    <TextView
+                        android:id="@+id/biaoti"
+                        style="@style/FormFieldsValue2"
+                        android:layout_weight="5"
+                        android:hint="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_bored"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen05"
+                    android:visibility="visible">
+
+                    <TextView
+                        style="@style/FormFieldsName2"
+                        android:layout_height="match_parent"
+                        android:text="正文" />
+
+                    <View
+                        android:layout_width="@dimen/dimen1"
+                        android:layout_height="match_parent"
+                        android:background="#ff0000" />
+
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:background="#f4f9ff">
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="@dimen/dimen40"
+                            android:background="#f4f9ff" />
+
+                        <LinearLayout
+                            android:id="@+id/zhengwen"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="invisible">
+
+                            <ImageView
+                                android:layout_width="@dimen/dimen20"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/dimen8"
+                                android:layout_marginRight="@dimen/dimen8"
+                                android:src="@mipmap/document" />
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dimen40"
+                                android:gravity="center_vertical"
+                                android:text="正文" />
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_bored"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen05"
+                    android:visibility="visible">
+
+                    <TextView
+                        style="@style/FormFieldsName2"
+                        android:layout_height="match_parent"
+                        android:text="呈报内容" />
+
+                    <View
+                        android:layout_width="@dimen/dimen1"
+                        android:layout_height="match_parent"
+                        android:background="#ff0000" />
+
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:background="#f4f9ff">
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="@dimen/dimen40"
+                            android:background="#f4f9ff" />
+
+                        <LinearLayout
+                            android:id="@+id/chengbaoneirong"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="invisible">
+
+                            <ImageView
+                                android:layout_width="@dimen/dimen20"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/dimen8"
+                                android:layout_marginRight="@dimen/dimen8"
+                                android:src="@mipmap/document" />
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dimen40"
+                                android:gravity="center_vertical"
+                                android:text="呈报内容" />
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_bored"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen05"
+                    android:visibility="visible">
+
+                    <TextView
+                        style="@style/FormFieldsName2"
+                        android:layout_height="match_parent"
+                        android:text="意见栏" />
+
+                    <View
+                        android:layout_width="@dimen/dimen1"
+                        android:layout_height="match_parent"
+                        android:background="#ff0000" />
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:background="#f4f9ff">
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="@dimen/dimen60"
+                            android:background="#f4f9ff" />
+
+                        <com.ysbd.beijing.view.CommentLinearLayout
+                            android:id="@+id/cl_yijianlan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"></com.ysbd.beijing.view.CommentLinearLayout>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_bored"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen05"
+                    android:visibility="visible">
+
+                    <TextView
+                        style="@style/FormFieldsName2"
+                        android:layout_height="match_parent"
+                        android:text="成文日期" />
+
+                    <View
+                        android:layout_width="@dimen/dimen1"
+                        android:layout_height="match_parent"
+                        android:background="#ff0000" />
+
+
+                    <TextView
+                        android:id="@+id/chengwenriqi"
+                        style="@style/FormFieldsValue2"
+                        android:layout_weight="5"
+                        android:hint="" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_bored"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen05">
+
+                    <TextView
+                        style="@style/FormFieldsName2"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/dimen1"
+                        android:text="附     件" />
+
+                    <View
+                        android:layout_width="@dimen/dimen1"
+                        android:layout_height="match_parent"
+                        android:background="#ff0000" />
+
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:background="#f4f9ff">
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="@dimen/dimen80"
+                            android:background="#f4f9ff" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="#6c6c6c"
+                                    android:orientation="horizontal"
+                                    android:paddingBottom="@dimen/dimen1">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="@dimen/dimen1"
+                                        android:layout_weight="1"
+                                        android:background="#dcdce1"
+                                        android:paddingBottom="@dimen/dimen2"
+                                        android:paddingTop="@dimen/dimen2"
+                                        android:singleLine="true"
+                                        android:text="上传文件人员"
+                                        android:textColor="#000"
+                                        android:textSize="@dimen/dimen13" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="@dimen/dimen1"
+                                        android:layout_weight="2"
+                                        android:background="#dcdce1"
+                                        android:padding="@dimen/dimen2"
+                                        android:text="标题"
+                                        android:textColor="#000"
+                                        android:textSize="@dimen/dimen13" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="@dimen/dimen1"
+                                        android:layout_weight="0.7"
+                                        android:background="#dcdce1"
+                                        android:padding="@dimen/dimen2"
+                                        android:singleLine="true"
+                                        android:text="扩展名称"
+                                        android:textColor="#000"
+                                        android:textSize="@dimen/dimen13" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="@dimen/dimen1"
+                                        android:layout_weight="1"
+                                        android:background="#dcdce1"
+                                        android:padding="@dimen/dimen2"
+                                        android:text="部门名称"
+                                        android:textColor="#000"
+                                        android:textSize="@dimen/dimen13" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:background="#dcdce1"
+                                        android:padding="@dimen/dimen2"
+                                        android:text="上传时间"
+                                        android:textColor="#000"
+                                        android:textSize="@dimen/dimen13" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <com.ysbd.beijing.view.CommentLinearLayout
+                                android:id="@+id/cl_attachment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" />
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

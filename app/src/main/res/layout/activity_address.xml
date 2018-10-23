@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ysbd.beijing.ui.activity.SearchAddressActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen40"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimaryDark">//background2
+            <FrameLayout
+                android:id="@+id/fl_back"
+                android:layout_width="@dimen/dimen40"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="@dimen/dimen24"
+                    android:layout_height="@dimen/dimen24"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/back"/>
+            </FrameLayout>
+            <RelativeLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingBottom="@dimen/dimen4"
+                android:paddingLeft="@dimen/dimen10"
+                android:paddingRight="@dimen/dimen10"
+                android:paddingTop="@dimen/dimen4"
+                >
+
+
+                <com.ysbd.beijing.view.SeekEditText
+                    android:id="@+id/contactList_seekEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_while_360"
+                    android:ellipsize="end"
+                    android:hint="请输入搜索内容"
+                    android:imeOptions="actionSearch"
+                    android:paddingTop="@dimen/dimen5"
+                    android:paddingBottom="@dimen/dimen5"
+                    android:paddingLeft="@dimen/dimen5"
+                    android:paddingRight="@dimen/dimen5"
+                    android:singleLine="true"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/dimen14" />
+
+            </RelativeLayout>
+            <FrameLayout
+                android:layout_width="@dimen/dimen40"
+                android:layout_height="match_parent">
+                <!--<ImageView-->
+                    <!--android:layout_width="@dimen/dimen24"-->
+                    <!--android:layout_height="@dimen/dimen24"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:src="@mipmap/search"/>-->
+
+            </FrameLayout>
+        </LinearLayout>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/contactList_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dimen20"
+                android:background="@android:color/white">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <com.mcxtzhang.indexlib.IndexBar.widget.IndexBar
+                android:id="@+id/contactList_indexBar"
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:layout_marginBottom="@dimen/dimen15"
+                android:layout_marginTop="@dimen/dimen15"
+                app:indexBarPressBackground="#0000"
+                app:indexBarTextSize="16sp" />
+
+            <TextView
+                android:id="@+id/contactList_barHint"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:background="@drawable/shape_side_bar_bg"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:layout_centerInParent="true"
+                android:textSize="48sp"
+                android:visibility="gone"
+                tools:text="A"
+                tools:visibility="visible" />
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

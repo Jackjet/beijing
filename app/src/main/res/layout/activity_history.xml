@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ysbd.beijing.ui.activity.HistoryActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen40"
+        android:background="@color/login_blue">
+        <FrameLayout
+            android:id="@+id/fl_back"
+            android:layout_alignParentLeft="true"
+            android:layout_width="@dimen/dimen40"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="@dimen/dimen20"
+                android:layout_height="@dimen/dimen20"
+                android:src="@mipmap/back"/>
+        </FrameLayout>
+
+        <TextView
+            android:layout_toRightOf="@id/fl_back"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/tvTitleWhite"
+            android:textSize="@dimen/dimen16"
+            android:gravity="center"
+            android:text="流程"/>
+
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ccc">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen30"
+            android:layout_margin="@dimen/dimen1"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_num"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="#ddd"
+                android:gravity="center"
+                android:text="步骤"
+                android:textSize="@dimen/dimen14" />
+
+            <TextView
+                android:id="@+id/tv_sender"
+                android:text="发送人"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dimen1"
+                android:layout_weight="3"
+                android:background="#ddd"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dimen4"
+                android:textSize="@dimen/dimen14" />
+
+            <TextView
+                android:text="发送时间"
+                android:id="@+id/tv_time"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dimen1"
+                android:layout_weight="1.5"
+                android:background="#ddd"
+                android:gravity="center"
+                android:textSize="@dimen/dimen14" />
+
+            <TextView
+                android:id="@+id/tv_receiver"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dimen1"
+                android:layout_weight="3"
+                android:background="#ddd"
+                android:gravity="center_vertical"
+                android:text="接收人"
+                android:paddingLeft="@dimen/dimen4"
+                android:textSize="@dimen/dimen14" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

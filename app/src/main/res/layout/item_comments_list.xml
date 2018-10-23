@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background2"
+    android:paddingBottom="@dimen/dimen1">
+
+    <TextView
+        android:id="@+id/itemCommentsList_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen45"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/layout_padding_22dp"
+        android:text="已阅"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_18sp" />
+</RelativeLayout>

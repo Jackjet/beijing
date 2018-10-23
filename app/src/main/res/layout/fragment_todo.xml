@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen36"
+            android:background="#f2f2f2"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:visibility="gone"
+            android:paddingRight="15dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/cuiban" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="催办"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/dimen14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/huishouzhan" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="回收站"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/dimen14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/gerenshezhi" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="个人设置"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/dimen14" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen28"
+            android:orientation="horizontal"
+            android:background="#696969"
+            android:padding="@dimen/dimen1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/dimen8"
+                android:paddingRight="@dimen/dimen2"
+                android:text="年"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="@dimen/dimen13"
+                android:background="#ccc"/>
+            <FrameLayout
+                android:layout_marginLeft="@dimen/dimen1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="#fff">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dimen2"
+                    android:textSize="@dimen/dimen13"
+                    android:text=""
+                    android:background="@drawable/bg_strok_edit"/>
+            </FrameLayout>
+            <FrameLayout
+                android:layout_marginLeft="@dimen/dimen1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="#fff">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dimen2"
+                    android:textSize="@dimen/dimen13"
+                    android:background="@drawable/bg_strok_edit"/>
+            </FrameLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/dimen2"
+                android:paddingRight="@dimen/dimen2"
+                android:text="号"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="@dimen/dimen13"
+                android:background="#fff"/>
+            <TextView
+                android:layout_marginLeft="@dimen/dimen1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/dimen2"
+                android:paddingRight="@dimen/dimen2"
+                android:text="原文字号"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="@dimen/dimen13"
+                android:background="#ccc"/>
+            <FrameLayout
+                android:layout_marginLeft="@dimen/dimen1"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:background="#fff">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dimen2"
+                    android:textSize="@dimen/dimen13"
+                    android:background="@drawable/bg_strok_edit"/>
+            </FrameLayout>
+            <TextView
+                android:layout_marginLeft="@dimen/dimen1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/dimen2"
+                android:paddingRight="@dimen/dimen2"
+                android:text="标题"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="@dimen/dimen13"
+                android:background="#ccc"/>
+            <FrameLayout
+                android:layout_marginLeft="@dimen/dimen1"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:background="#fff">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dimen2"
+                    android:textSize="@dimen/dimen13"
+                    android:background="@drawable/bg_strok_edit"/>
+            </FrameLayout>
+            <TextView
+                android:layout_marginLeft="@dimen/dimen1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/dimen2"
+                android:paddingRight="@dimen/dimen2"
+                android:text="主办处室"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="@dimen/dimen13"
+                android:background="#ccc"/>
+            <FrameLayout
+                android:layout_marginLeft="@dimen/dimen1"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:background="#fff">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dimen2"
+                    android:textSize="@dimen/dimen13"
+                    android:background="@drawable/bg_strok_edit"/>
+            </FrameLayout>
+            <TextView
+                android:layout_marginLeft="@dimen/dimen1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/dimen2"
+                android:paddingRight="@dimen/dimen2"
+                android:text="来文单位"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="@dimen/dimen13"
+                android:background="#ccc"/>
+            <FrameLayout
+                android:layout_marginLeft="@dimen/dimen1"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:background="#fff">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dimen2"
+                    android:textSize="@dimen/dimen13"
+                    android:background="@drawable/bg_strok_edit"/>
+            </FrameLayout>
+            <TextView
+                android:layout_marginLeft="@dimen/dimen1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/dimen8"
+                android:paddingRight="@dimen/dimen8"
+                android:text="查询"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="@dimen/dimen13"
+                android:background="#ccc"/>
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragmentToDoRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f2f2f2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen36"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/shape_back_list"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="上一页"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="#3e9fef"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="1"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/shape_next_list"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="下一页"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="共7条"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

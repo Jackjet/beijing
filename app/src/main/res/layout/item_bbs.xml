@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen36"
+        android:paddingLeft="@dimen/dimen12"
+        android:paddingRight="@dimen/dimen12"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/todo_start" />
+
+        <TextView
+            android:id="@+id/item_bbs_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="主办文"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="08-01"
+            android:textColor="#000000"
+            android:textSize="@dimen/dimen14" />
+    </LinearLayout>
+
+
+</RelativeLayout>

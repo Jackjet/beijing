@@ -1,0 +1,54 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="dimen05">0.75dp</dimen>
+    <dimen name="dimen1">1.5dp</dimen>
+    <dimen name="dimen2">3dp</dimen>
+    <dimen name="dimen3">4dp</dimen>
+    <dimen name="dimen4">5.5dp</dimen>
+    <dimen name="dimen5">7dp</dimen>
+    <dimen name="dimen6">8dp</dimen>
+    <dimen name="dimen7">9.5dp</dimen>
+    <dimen name="dimen8">10dp</dimen>
+    <dimen name="dimen10">13dp</dimen>
+    <dimen name="dimen12">15dp</dimen>
+    <dimen name="dimen13">16dp</dimen>
+    <dimen name="dimen14">18dp</dimen>
+    <dimen name="dimen15">20dp</dimen>
+    <dimen name="dimen16">21dp</dimen>
+    <dimen name="dimen17">22dp</dimen>
+    <dimen name="dimen18">24dp</dimen>
+    <dimen name="dimen20">26dp</dimen>
+    <dimen name="dimen21">27dp</dimen>
+    <dimen name="dimen22">28dp</dimen>
+    <dimen name="dimen24">30dp</dimen>
+    <dimen name="dimen25">31dp</dimen>
+    <dimen name="dimen28">33dp</dimen>
+    <dimen name="dimen30">36dp</dimen>
+    <dimen name="dimen35">43dp</dimen>
+    <dimen name="dimen36">44dp</dimen>
+    <dimen name="dimen38">45dp</dimen>
+    <dimen name="dimen40">50dp</dimen>
+    <dimen name="dimen45">56dp</dimen>
+    <dimen name="dimen46">57dp</dimen>
+    <dimen name="dimen48">60dp</dimen>
+    <dimen name="dimen49">61dp</dimen>
+    <dimen name="dimen50">62dp</dimen>
+    <dimen name="dimen52">65dp</dimen>
+    <dimen name="dimen55">70dp</dimen>
+    <dimen name="dimen56">72dp</dimen>
+    <dimen name="dimen60">75dp</dimen>
+    <dimen name="dimen62">80dp</dimen>
+    <dimen name="dimen70">86dp</dimen>
+    <dimen name="dimen72">90dp</dimen>
+    <dimen name="dimen80">100dp</dimen>
+    <dimen name="dimen82">103dp</dimen>
+    <dimen name="dimen100">130dp</dimen>
+    <dimen name="dimen120">150dp</dimen>
+    <dimen name="dimen140">160dp</dimen>
+    <dimen name="dimen150">180dp</dimen>
+    <dimen name="dimen160">195dp</dimen>
+    <dimen name="dimen200">250dp</dimen>
+    <dimen name="dimen300">400dp</dimen>
+    <dimen name="dimen360">480dp</dimen>
+    <!--<item name="scale_value" type="dimen" format="float">1.2</item>-->
+</resources>

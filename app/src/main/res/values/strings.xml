@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">北京市财政局</string>
+    <string name="provider">com.ysbd.beijing.fileprovider</string>
+</resources>
