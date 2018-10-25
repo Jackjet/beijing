@@ -117,22 +117,18 @@ public class FileReaderActivity extends Activity implements TbsReaderView.Reader
 
         boolean result = mTbsReaderView.preOpen(extension, false);
         if (result) {
-            App.logStr = App.logStr+"3-";
+
             llRoot.addView(mTbsReaderView, new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-            App.logStr = App.logStr+"4-";
+
             mTbsReaderView.openFile(bundle);
-            App.logStr = App.logStr+"5-";
             if (firstOpen) {
-                App.logStr = App.logStr+"6-";
                 firstOpen = false;
                 llRoot.removeAllViews();
                 mTbsReaderView.onStop();
                 mTbsReaderView = new TbsReaderView(this, this);
                 mTbsReaderView.preOpen(extension, false);
                 llRoot.addView(mTbsReaderView, new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-                App.logStr = App.logStr+"7-";
-                mTbsReaderView.openFile(bundle);
-                App.logStr = App.logStr+"8-";
+               mTbsReaderView.openFile(bundle);
 
             }
 
@@ -308,7 +304,6 @@ public class FileReaderActivity extends Activity implements TbsReaderView.Reader
                 localFile.delete();
             }
         }
-        Log.e("附件问题",App.logStr);
 
     }
 

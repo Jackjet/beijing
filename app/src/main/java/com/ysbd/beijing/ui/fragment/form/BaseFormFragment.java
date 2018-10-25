@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
@@ -17,6 +18,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.google.gson.Gson;
+import com.ntko.app.office.wps.params.WPSWordParameters;
+import com.ntko.app.support.Params;
+import com.ntko.app.support.callback.WPSWordParametersCallback;
 import com.ysbd.beijing.App;
 import com.ysbd.beijing.BaseFragment;
 import com.ysbd.beijing.bean.DocumentBean;
@@ -531,10 +535,10 @@ public class BaseFormFragment extends BaseFragment implements CommentAdapter.Com
     }
 
 
+    //需要加载腾讯浏览服务
     public void lookFile(boolean isDocument) {
 
         if (isDocument) {
-            App.logStr = App.logStr + "1-";
             Intent intent = new Intent(getContext(), EditActivity.class);
             intent.putExtra("path", filePath);
             int index = filePath.lastIndexOf("/");
@@ -546,7 +550,6 @@ public class BaseFormFragment extends BaseFragment implements CommentAdapter.Com
             intent.putExtra("uploadurl", "");
             startActivityForResult(intent, 101);
         } else {
-            App.logStr = App.logStr + "2-";
             Log.e("filePath", filePath);
             Log.e("fileName", fileName);
             Intent intent = new Intent(getContext(), FileReaderActivity.class);
@@ -555,6 +558,25 @@ public class BaseFormFragment extends BaseFragment implements CommentAdapter.Com
             intent.putExtra("isDocument", isDocument);
             intent.putExtra("firstOpen", false);
             startActivity(intent);
+        }
+    }
+
+    //跳转intent 打开
+    public void lookFile1(boolean isDocument) {
+
+        if (isDocument) {
+            Intent intent = new Intent(getContext(), EditActivity.class);
+            intent.putExtra("path", filePath);
+            int index = filePath.lastIndexOf("/");
+            String name = "";
+            if (index > 1) {
+                filePath.substring(index + 1);
+            }
+            intent.putExtra("filename", name);
+            intent.putExtra("uploadurl", "");
+            startActivityForResult(intent, 101);
+        } else {
+           getContext().startActivity(FileUtils.getInstance().openFile(filePath, getContext()));
         }
     }
 
@@ -599,7 +621,7 @@ public class BaseFormFragment extends BaseFragment implements CommentAdapter.Com
                         if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
                             ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 20104);
                         } else {
-                            lookFile(false);
+                            lookFile1(false);
                         }
                     }
                     break;
@@ -611,7 +633,7 @@ public class BaseFormFragment extends BaseFragment implements CommentAdapter.Com
                         if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
                             ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 20104);
                         } else {
-                            lookFile(true);
+                            lookFile1(true);
                         }
                     }
                     break;

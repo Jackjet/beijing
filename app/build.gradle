@@ -8,8 +8,8 @@ android {
         applicationId "com.ysbd.beijing"
         minSdkVersion 19
         targetSdkVersion 27
-        versionCode 25
-        versionName "1.3.5"
+        versionCode 28
+        versionName "1.3.8"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
@@ -24,6 +24,15 @@ android {
 
         abortOnError false
 
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def fileName = "北京财政_" + "${variant.versionName}.apk"
+            def outFile = output.outputFile
+            if (outFile != null && outFile.name.endsWith('.apk')) {
+                outputFileName = fileName
+            }
+        }
     }
 
     buildTypes {

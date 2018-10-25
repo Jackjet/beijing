@@ -27,7 +27,7 @@ public class App extends LitePalApplication {
     public static int tabCode = -1;
     public static String userId;
 
-    public static String logStr = "";
+
 
     @Override
     public void onCreate() {

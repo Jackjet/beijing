@@ -57,10 +57,10 @@ public class WebServiceManager {
         MyGBKSe se = new MyGBKSe(url);
         log("****url************" + method + "***********url****\n" + url);
         log(userName + "****json************" + method + "***********json****\n" + json);
-        ClipboardManager clipboardManager = (ClipboardManager) App.getContext().getSystemService(Context.CLIPBOARD_SERVICE);
+//        ClipboardManager clipboardManager = (ClipboardManager) App.getContext().getSystemService(Context.CLIPBOARD_SERVICE);
         //添加ClipData对象到剪切板中
         String log = "json=" + json + ";   url=" + url + ";  method=" + method;
-        clipboardManager.setText(log);
+//        clipboardManager.setText(log);
 //        String soapAction = "http://mobile.risesoft.net/login";
         try {
             String a = "";

@@ -6,6 +6,7 @@ import android.text.ClipboardManager;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.ysbd.beijing.App;
 import com.ysbd.beijing.bean.AddressBean;
 
 import org.json.JSONException;
@@ -133,7 +134,7 @@ public class WebServiceUtils {
 
     public void refreshAddressBook() {
         DataSupport.deleteAll(AddressBean.class);
-        SpUtils.getInstance().setAddressVisiable(false);
+//        SpUtils.getInstance().setAddressVisiable(false);
         String data = WebServiceManager.getInstance().connect("getAdderBook", HOST_TODO, "?");
         try {
             JSONObject jsonObject = new JSONObject(data);
@@ -189,7 +190,7 @@ public class WebServiceUtils {
                     try {
                         value.save();
                     } catch (Exception e) {
-
+                        App.catchE(e);
                     }
 
                 }
@@ -389,6 +390,12 @@ public class WebServiceUtils {
 
         String value = "{\"user\":\"" + name + "\",\"userid\":\"" + userid + "\",\"password\":\"" + newPass + "\"}";
         return WebServiceManager.getInstance().connect("updatepassword", HOST_USER, value);
+    }
+
+
+    public String getUserInfo(String userid){
+        String value = "{\"userid\":\""+ userid  + "\"}";
+        return WebServiceManager.getInstance().connect("userinfos", HOST_TODO, value);
     }
 
     /**

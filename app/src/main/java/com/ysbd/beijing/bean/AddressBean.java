@@ -135,4 +135,21 @@ public class AddressBean  extends BaseIndexPinyinBean {
     public String getTarget() {
         return nodeName;
     }
+
+    @Override
+    public String toString() {
+        return "AddressBean{" +
+                "imageUrl='" + imageUrl + '\'' +
+                ", index=" + index +
+                ", level=" + level +
+                ", nodeGuid='" + nodeGuid + '\'' +
+                ", nodeName='" + nodeName + '\'' +
+                ", jobtitles='" + jobtitles + '\'' +
+                ", nodeType=" + nodeType +
+                ", parentNodeGuid='" + parentNodeGuid + '\'' +
+                ", isParent=" + isParent +
+                ", isOpen=" + isOpen +
+                ", isSelect=" + isSelect +
+                '}';
+    }
 }

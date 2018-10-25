@@ -110,6 +110,7 @@ public class CommentActivity extends BaseActivity {
             @Override
             public void onViewClick(int position) {
                 //可把常用语添加到意见框
+               etContent.setText(etContent.getText().toString()+list.get(position));
             }
         });
         if (!TextUtils.isEmpty(guid) && !TextUtils.isEmpty(sp.getString(Constants.USER_ID, ""))) {

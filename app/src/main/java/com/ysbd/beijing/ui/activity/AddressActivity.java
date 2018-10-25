@@ -25,19 +25,34 @@ public class AddressActivity extends BaseActivity {
     @BindView(R.id.lv_contract)
     ListView lvContract;
     TreeAdapter adapter;
-    List<AddressBean> roots=new ArrayList<>();
+    List<AddressBean> roots = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_address2);
         ButterKnife.bind(this);
-        roots.addAll(DBUtils.getRootDepart());
-        for (int i = 0; i < roots.size(); i++) {
-            roots.get(i).setLevel(1);
-            roots.get(i).setParent(true);
-            roots.get(i).setOpen(false);
+
+        //无人员的部门不显示
+        List<AddressBean> rootDepart = DBUtils.getRootDepart();
+        for (AddressBean bean : rootDepart) {
+            List<AddressBean> child = DBUtils.getChild(bean.getNodeGuid());
+            if (child != null && child.size() != 0) {
+                bean.setLevel(1);
+                bean.setParent(true);
+                bean.setOpen(false);
+                roots.add(bean);
+            }
         }
-        adapter=new TreeAdapter(this,roots,1);
+
+//          无人员的部门显示
+//        roots.addAll(DBUtils.getRootDepart());
+//        for (int i = 0; i < roots.size(); i++) {
+//            roots.get(i).setLevel(1);
+//            roots.get(i).setParent(true);
+//            roots.get(i).setOpen(false);
+//        }
+        adapter = new TreeAdapter(this, roots, 1);
         lvContract.setOnItemClickListener(new MyOnItemClick());
         lvContract.setAdapter(adapter);
     }
@@ -45,8 +60,9 @@ public class AddressActivity extends BaseActivity {
     private int clickPosition;
 
 
-    private class MyOnItemClick implements AdapterView.OnItemClickListener{
-        List<AddressBean> mu=new ArrayList<>();
+    private class MyOnItemClick implements AdapterView.OnItemClickListener {
+        List<AddressBean> mu = new ArrayList<>();
+
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             clickPosition = position;
@@ -68,15 +84,20 @@ public class AddressActivity extends BaseActivity {
                     roots.get(position).setOpen(true);
                     mu.addAll(DBUtils.getChild(roots.get(position).getNodeGuid()));
                     for (int i = 0; i < mu.size(); i++) {
-                        mu.get(i).setParent( mu.get(i).getImageUrl().contains("p"));
-                        mu.get(i).setLevel(roots.get(position).getLevel()+1);
+                        mu.get(i).setParent(mu.get(i).getImageUrl().contains("p"));
+                        mu.get(i).setLevel(roots.get(position).getLevel() + 1);
                     }
-                    roots.addAll(position+1,mu);
+                    roots.addAll(position + 1, mu);
                     mu.clear();
                     adapter.notifyDataSetChanged();
                 }
             } else {//点击联系人
-
+                Intent intent = new Intent(AddressActivity.this, PersonActivity.class);
+                intent.putExtra("userId", roots.get(position).getNodeGuid());
+                intent.putExtra("depart", DBUtils.getPersonNameById(roots.get(position).getParentNodeGuid()));
+                intent.putExtra("name", roots.get(position).getNodeName());
+                intent.putExtra("job", roots.get(position).getJobtitles());
+                startActivity(intent);
             }
         }
     }
@@ -89,7 +110,7 @@ public class AddressActivity extends BaseActivity {
                 finish();
                 break;
             case R.id.fl_search:
-                startActivity(new Intent(this,SearchAddressActivity.class));
+                startActivity(new Intent(this, SearchAddressActivity.class));
                 break;
         }
     }

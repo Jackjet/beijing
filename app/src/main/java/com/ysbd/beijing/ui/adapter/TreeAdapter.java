@@ -1,6 +1,7 @@
 package com.ysbd.beijing.ui.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 
 import com.ysbd.beijing.R;
 import com.ysbd.beijing.bean.AddressBean;
+import com.ysbd.beijing.utils.DBUtils;
 
 import java.util.List;
 
@@ -71,20 +73,30 @@ public class TreeAdapter extends BaseAdapter {
         }
 
         final AddressBean data = mList.get(position);
-
+        convertView.setVisibility(View.VISIBLE);
         if (data.isParent()) {
-            vh.child.setVisibility(View.GONE);
-            vh.parent.setVisibility(View.VISIBLE);
-            // 判断是否有下级菜单
-            if (data.isOpen()) {
-                // 有下级菜单，且为展开状态
-                vh.icon.setImageResource(R.mipmap.abc_ic_go1);
-            } else {
-                // 有下级菜单，且为关闭状态
-                vh.icon.setImageResource(R.mipmap.abc_ic_go);
-            }
+            List<AddressBean> child = DBUtils.getChild(data.getNodeGuid());
+            if (child!=null&& child.size()!=0) {
+                vh.child.setVisibility(View.GONE);
+                vh.parent.setVisibility(View.VISIBLE);
+                // 判断是否有下级菜单
+                if (data.isOpen()) {
+                    // 有下级菜单，且为展开状态
+                    vh.icon.setImageResource(R.mipmap.abc_ic_go1);
+                } else {
+                    // 有下级菜单，且为关闭状态
+                    vh.icon.setImageResource(R.mipmap.abc_ic_go);
+                }
 
-            vh.name.setText(data.getNodeName());
+                vh.name.setText(data.getNodeName());
+            }else {
+                convertView.setVisibility(View.GONE);
+                vh.child.setVisibility(View.GONE);
+                vh.parent.setVisibility(View.GONE);
+            }
+            if (data.getNodeName().equals("预算研究会")||data.getNodeName().equals("统评处")) {
+                Log.e("====",""+data.toString());
+            }
         } else {
             vh.child.setVisibility(View.VISIBLE);
             vh.parent.setVisibility(View.GONE);

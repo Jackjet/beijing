@@ -323,7 +323,7 @@ public class JieyuzijinfawenFragment extends BaseFormFragment  {
 //        huanji.setText(bean.getHuanji());
         shouji.setText(bean.getJiaoduidianhua());//机号/
         daziyuan.setText(bean.getLururen());
-        miji.setText(bean.getMiji());
+        miji.setText(Html.fromHtml(bean.getMiji()));
         nian.setText(bean.getNian());
         xianbanriqi.setText(DateFormatUtil.subDate(bean.getXianbanshijian()));// 办日期/
 //        nigaoren.setText(bean.getNigao() + " " + DateFormatUtil.subDate(bean.getNigaoriqi()));

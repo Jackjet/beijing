@@ -59,6 +59,7 @@
         <activity android:name=".ui.activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -77,9 +78,8 @@
             android:name="PGYER_APPID"
             android:value="4df23665c2bc5d61526606396469376f" />
 
-        <activity android:name=".ui.activity.SettingActivity">
-
-        </activity>
+        <activity android:name=".ui.activity.SettingActivity"></activity>
+        <activity android:name=".ui.activity.PersonActivity"></activity>
     </application>
 
 </manifest>

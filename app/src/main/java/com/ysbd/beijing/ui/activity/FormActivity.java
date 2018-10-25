@@ -134,7 +134,7 @@ public class FormActivity extends BaseActivity {
     public void addMenus(List<MenuBean> menus) {
         if (menus != null) {
             for (int i = 0; i < menus.size(); i++) {
-                if (!menus.get(i).getName().contains("起草") && !menus.get(i).getName().contains("协办")) {
+                if (!menus.get(i).getName().contains("起草") ) {//&& !menus.get(i).getName().contains("协办")
                     if (menus.get(i).getName().equals("办结")) {
                         menus.get(i).setName("完成");
                     }

@@ -73,8 +73,8 @@ public class DataActivity extends BaseActivity implements QueryHelper {
             queryFragment = QueryFragment.getInstance(type);
             queryFragment.setQueryHelper(this);
             replaceFragment(queryFragment);
-        }else {
-            code=code.replace("文档","");
+        } else {
+            code = code.replace("文档", "");
             replaceFragment(getFragment(code));
         }
 //        switch (code) {
@@ -106,15 +106,15 @@ public class DataActivity extends BaseActivity implements QueryHelper {
     private BaseFragment getFragment(String actor) {
         switch (type) {
             case "主办文":
-                ZhubanwenList zhubanwenList=ZhubanwenList.getInstance(type, actor);
+                ZhubanwenList zhubanwenList = ZhubanwenList.getInstance(type, actor);
                 zhubanwenList.setQueryHelper(this);
                 return zhubanwenList;
             case "局内传文":
-                JuneichuanwenList juneichuanwenList=JuneichuanwenList.getInstance(type, actor);
+                JuneichuanwenList juneichuanwenList = JuneichuanwenList.getInstance(type, actor);
                 juneichuanwenList.setQueryHelper(this);
                 return juneichuanwenList;
             case "一般发文":
-                YibanfawenListFragment yibanfawenListFragment=YibanfawenListFragment.getInstance(type, actor);
+                YibanfawenListFragment yibanfawenListFragment = YibanfawenListFragment.getInstance(type, actor);
                 yibanfawenListFragment.setQueryHelper(this);
                 return yibanfawenListFragment;
             case "指标文":
@@ -127,7 +127,6 @@ public class DataActivity extends BaseActivity implements QueryHelper {
                 return ToDoFragment.getInstance(type, actor);
         }
     }
-
 
 
     private void replaceFragment(Fragment fragment) {
@@ -194,54 +193,61 @@ public class DataActivity extends BaseActivity implements QueryHelper {
         getMenu();
     }
 
-    private void getMenu(){
-        new Thread(){
-            @Override
-            public void run() {
-                super.run();
-                String deedboxGUID="";
-                switch (type){
-                    case "主办文":
-                        deedboxGUID="{A9522312-FFFF-FFFF-B234-4A0A00000107}";
-                        break;
-                    case "局内传文":
-                        deedboxGUID="{A9522312-0000-0000-069E-099B000000AB}";
-                        break;
-                    case "一般发文":
-                    case "指标文":
-                    case "结余资金":
-                        deedboxGUID="{A952230B-0000-0000-2D53-B16E00000023}";
-                        break;
-                    case "市转文":
-                        deedboxGUID="{0A2FF41F-FFFF-FFFF-E266-3CDB00000072}";
-                        break;
-                }
-                String data=WebServiceUtils.getInstance().getUserMenus(deedboxGUID);
-                if (data!=null) {
-                    if(data.contains("监控在办")){
-                        classTitle.add(3,"监控在办");
-                    }
-                    if(data.contains("监控已办")){
-                        classTitle.add(4,"监控已办");
-                    }
-//                    if(data.contains("在办纸质文件")){
-//                        classTitle.add("在办纸质文件");
+    private void getMenu() {
+//        new Thread(){
+//            @Override
+//            public void run() {
+//                super.run();
+//                String deedboxGUID="";
+//                switch (type){
+//                    case "主办文":
+//                        deedboxGUID="{A9522312-FFFF-FFFF-B234-4A0A00000107}";
+//                        break;
+//                    case "局内传文":
+//                        deedboxGUID="{A9522312-0000-0000-069E-099B000000AB}";
+//                        break;
+//                    case "一般发文":
+//                    case "指标文":
+//                    case "结余资金":
+//                        deedboxGUID="{A952230B-0000-0000-2D53-B16E00000023}";
+//                        break;
+//                    case "市转文":
+//                        deedboxGUID="{0A2FF41F-FFFF-FFFF-E266-3CDB00000072}";
+//                        break;
+//                }
+//                String data=WebServiceUtils.getInstance().getUserMenus(deedboxGUID);
+//                if (data!=null) {
+//                    if(data.contains("监控在办")){
+//                        classTitle.add(3,"监控在办");
 //                    }
-                }
-                handler.sendEmptyMessage(1);
-            }
+//                    if(data.contains("监控已办")){
+//                        classTitle.add(4,"监控已办");
+//                    }
+////                    if(data.contains("在办纸质文件")){
+////                        classTitle.add("在办纸质文件");
+////                    }
+//                }
+//                handler.sendEmptyMessage(1);
+//            }
+        if (SpUtils.getInstance().getUserName().equals("吴素芳")
+                ||SpUtils.getInstance().getUserName().equals("刘海涛")
+                ||SpUtils.getInstance().getUserName().equals("范永杰")
+                ||SpUtils.getInstance().getUserName().equals("彭尚高")) {
+            classTitle.add(3, "监控在办");
+            classTitle.add(4, "监控已办");
+        }
+        handler.sendEmptyMessage(1);
 
-        }.start();
 
     }
 
 
-    Handler handler=new Handler(){
+    Handler handler = new Handler() {
 
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            switch (msg.what){
+            switch (msg.what) {
                 case 0:
                     classAdapter.notifyDataSetChanged();
                     break;
@@ -253,7 +259,7 @@ public class DataActivity extends BaseActivity implements QueryHelper {
     public void onViewClicked() {
         if (showQueryList) {
             showQueryList = false;
-            if (queryFragment!=null) {
+            if (queryFragment != null) {
                 replaceFragment(queryFragment);
             }
         } else {
