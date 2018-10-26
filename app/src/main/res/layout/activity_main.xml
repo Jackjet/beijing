@@ -28,6 +28,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
             android:src="@mipmap/logo_bc" />
+
         <TextView
             android:id="@+id/set"
             android:layout_width="wrap_content"
@@ -40,6 +41,7 @@
             android:text="设置"
             android:textColor="#ffffff"
             android:textSize="@dimen/dimen15" />
+
         <TextView
             android:id="@+id/logoutClick"
             android:layout_width="wrap_content"
@@ -54,7 +56,6 @@
             android:textSize="@dimen/dimen15" />
 
         <TextView
-            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginRight="5dp"
@@ -64,7 +65,8 @@
             android:paddingRight="10dp"
             android:text="设置"
             android:textColor="#ffffff"
-            android:textSize="@dimen/dimen15" />
+            android:textSize="@dimen/dimen15"
+            android:visibility="gone" />
     </RelativeLayout>
 
     <android.support.v7.widget.RecyclerView
@@ -73,8 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:paddingLeft="@dimen/dimen4"
-        android:paddingRight="@dimen/dimen4"
-        />
+        android:paddingRight="@dimen/dimen4" />
 
     <View
         android:layout_width="match_parent"
@@ -124,20 +125,21 @@
                         android:text="MORE"
                         android:textColor="#fff"
                         android:textSize="@dimen/dimen16"
-                        android:visibility="gone"/>
+                        android:visibility="gone" />
 
                 </LinearLayout>
+
                 <com.cjj.MaterialRefreshLayout
+                    android:id="@+id/refresh"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/refresh"
-                    app:overlay="true"
-                    app:wave_show="true"
-                    app:wave_color="#90ffffff"
                     app:isLoadMore="true"
+                    app:overlay="true"
                     app:progress_size_type="normal"
+                    app:wave_color="#90ffffff"
                     app:wave_height_type="normal"
-                    >
+                    app:wave_show="true">
+
                     <android.support.v7.widget.RecyclerView
                         android:id="@+id/todoRecyclerView"
                         android:layout_width="match_parent"
@@ -176,29 +178,15 @@
                         android:textColor="#000"
                         android:textSize="@dimen/dimen16" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:layout_marginRight="15dp"
-                        android:background="@drawable/shape_more"
-                        android:gravity="center"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
-                        android:text="更  多"
-                        android:textColor="#fff"
-                        android:textSize="@dimen/dimen15" />
-
                 </LinearLayout>
 
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/bbsRecyclerView"
+                <WebView
+                    android:id="@+id/webView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:background="@drawable/shape_bbs_recyclerview"
-                    android:paddingRight="10dp">
-
-                </android.support.v7.widget.RecyclerView>
+                    android:paddingRight="10dp"></WebView>
             </LinearLayout>
         </LinearLayout>
 
@@ -219,15 +207,15 @@
 
 
                 <TextView
-                    android:layout_marginTop="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
+                    android:layout_marginTop="15dp"
                     android:background="@drawable/money_bg"
                     android:gravity="center"
                     android:text="财政重要数据(待上线)"
                     android:textColor="#000"
-                    android:visibility="gone"
-                    android:textSize="@dimen/dimen15" />
+                    android:textSize="@dimen/dimen15"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/tv_richeng"
@@ -236,10 +224,11 @@
                     android:layout_marginTop="15dp"
                     android:background="@drawable/richeng_bg"
                     android:gravity="center"
-                    android:visibility="gone"
                     android:text="领导日程"
                     android:textColor="#000"
-                    android:textSize="@dimen/dimen15" />
+                    android:textSize="@dimen/dimen15"
+                    android:visibility="gone" />
+
                 <TextView
                     android:id="@+id/tv_address_book"
                     android:layout_width="match_parent"
@@ -250,6 +239,7 @@
                     android:text="通讯录"
                     android:textColor="#000"
                     android:textSize="@dimen/dimen15" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
@@ -257,10 +247,9 @@
                     android:background="@drawable/richeng_bg"
                     android:gravity="center"
                     android:text="重点工作专报(待上线)"
-                    android:visibility="gone"
                     android:textColor="#000"
-                    android:textSize="@dimen/dimen15" />
-
+                    android:textSize="@dimen/dimen15"
+                    android:visibility="gone" />
 
 
                 <TextView
@@ -270,9 +259,9 @@
                     android:background="@drawable/richeng_bg"
                     android:gravity="center"
                     android:text="内部邮件(待上线)"
-                    android:visibility="gone"
                     android:textColor="#000"
-                    android:textSize="@dimen/dimen15" />
+                    android:textSize="@dimen/dimen15"
+                    android:visibility="gone" />
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

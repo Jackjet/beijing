@@ -78,8 +78,9 @@
             android:name="PGYER_APPID"
             android:value="4df23665c2bc5d61526606396469376f" />
 
-        <activity android:name=".ui.activity.SettingActivity"></activity>
-        <activity android:name=".ui.activity.PersonActivity"></activity>
+        <activity android:name=".ui.activity.SettingActivity" />
+        <activity android:name=".ui.activity.PersonActivity" />
+        <activity android:name=".ui.activity.WebActivity"></activity>
     </application>
 
 </manifest>

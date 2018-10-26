@@ -18,6 +18,9 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -34,6 +37,7 @@ import com.ysbd.beijing.recyclerView.OnBindView;
 import com.ysbd.beijing.recyclerView.OnViewClickListener;
 import com.ysbd.beijing.recyclerView.RecyclerViewAdapter;
 import com.ysbd.beijing.ui.bean.TodoBean;
+import com.ysbd.beijing.utils.CheckVersionUtil;
 import com.ysbd.beijing.utils.Constants;
 import com.ysbd.beijing.utils.DBUtils;
 import com.ysbd.beijing.utils.DateFormatUtil;
@@ -63,11 +67,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private List<String> bbsList;
     private RecyclerViewAdapter bbsAdapter;
-    private RecyclerView bbsRecyclerView;
+//    private RecyclerView bbsRecyclerView;
 
 
     private TextView tvAddress;
-
+    private WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,12 +84,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         tvAddress.setOnClickListener(this);
         classTitleRecyclerView = findViewById(R.id.classTitleRecyclerView);
         todoRecyclerView = findViewById(R.id.todoRecyclerView);
-        bbsRecyclerView = findViewById(R.id.bbsRecyclerView);
+//        bbsRecyclerView = findViewById(R.id.bbsRecyclerView);
+        webView = findViewById(R.id.webView);
         todoRefresh.setMaterialRefreshListener(new MaterialRefreshListener() {
             @Override
             public void onRefresh(MaterialRefreshLayout materialRefreshLayout) {
                 todoPage = 1;
-//                getTodoRedGreenData();
                 getTodoData();
             }
 
@@ -93,7 +97,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             public void onRefreshLoadMore(MaterialRefreshLayout materialRefreshLayout) {
                 super.onRefreshLoadMore(materialRefreshLayout);
                 todoPage++;
-//                getTodoRedGreenData();
                 getTodoData();
             }
         });
@@ -111,7 +114,17 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         initTodo();
         initBbs();
         checkVersion(true);
+        CheckVersionUtil.getInstance().check(new CheckVersionUtil.VersionCall() {
+            @Override
+            public void update(String url) {
+                Log.e("版本更新",url);
+            }
 
+            @Override
+            public void notUpdate() {
+                Log.e("版本更新","无需更新");
+            }
+        });
 
     }
 
@@ -251,6 +264,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 d = d.replaceAll("北京市财政局,", "");
                 textView.setText(d);
                 tvTime.setText("");
+                if (showList.get(position).getLook().equals("红灯")) {
+                    image.setImageResource(R.drawable.hongdeng);
+                } else if (showList.get(position).getLook().equals("黄灯")) {
+                    image.setImageResource(R.drawable.huangdeng);
+                } else if (showList.get(position).getLook().equals("绿灯")) {
+                    image.setImageResource(R.drawable.lvdeng);
+                }
             }
         });
         todoRecyclerView.setAdapter(todoAdapter);
@@ -333,7 +353,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     }
 
-    private void getTodoRedGreenData(final String instanceGuid,final String userId) {
+    private void getTodoRedGreenData(final String instanceGuid, final String userId) {
         Log.e("====instanceGuid", instanceGuid + "-----");
         Log.e("====userId", userId + "-----");
         if (!TextUtils.isEmpty(instanceGuid)) {
@@ -341,7 +361,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 @Override
                 public void run() {
                     super.run();
-                    String s = WebServiceUtils.getInstance().findTodoRedGreenFiles(instanceGuid,userId);
+                    String s = WebServiceUtils.getInstance().findTodoRedGreenFiles(instanceGuid, userId);
                     Log.e("=========", s + "-----");
 //                List<TodoBean> todoBeans = new Gson().fromJson(s, new TypeToken<List<TodoBean>>() {
 //                }.getType());
@@ -370,17 +390,38 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     };
 
     private void initBbs() {
-        bbsList = DBUtils.getBbsList();
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
-        bbsRecyclerView.setLayoutManager(gridLayoutManager);
-        bbsAdapter = new RecyclerViewAdapter(bbsList, R.layout.item_bbs, new OnBindView() {
+//        bbsList = DBUtils.getBbsList();
+//        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
+//        bbsRecyclerView.setLayoutManager(gridLayoutManager);
+//        bbsAdapter = new RecyclerViewAdapter(bbsList, R.layout.item_bbs, new OnBindView() {
+//            @Override
+//            public void bindView(int position, Object data, View itemView, OnViewClickListener.OnChildViewClickListener viewClickListener) {
+//                TextView textView = itemView.findViewById(R.id.item_bbs_text);
+//                textView.setText(String.valueOf(data));
+//            }
+//        });
+//        bbsRecyclerView.setAdapter(bbsAdapter);
+        WebSettings settings = webView.getSettings();
+        //支持JavaScript
+        settings.setJavaScriptEnabled(true);
+//        webView.loadUrl("http://10.123.27.193:80//jntz/index_1077.htm");
+        webView.loadUrl("http://10.123.27.193:80/jntz/index_1077.htm");
+        //自己使用屏幕大小
+        webView.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
+        webView.getSettings().setLoadWithOverviewMode(true);
+        webView.setWebViewClient(new WebViewClient() {
             @Override
-            public void bindView(int position, Object data, View itemView, OnViewClickListener.OnChildViewClickListener viewClickListener) {
-                TextView textView = itemView.findViewById(R.id.item_bbs_text);
-                textView.setText(String.valueOf(data));
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                // TODO Auto-generated method stub
+                //返回值是true的时候控制去WebView打开，为false调用系统浏览器或第三方浏览器
+//                view.loadUrl(url);
+                Intent intent = new Intent(MainActivity.this, WebActivity.class);
+                intent.putExtra("url", url);
+                startActivity(intent);
+                return true;
             }
         });
-        bbsRecyclerView.setAdapter(bbsAdapter);
+
     }
 
 
