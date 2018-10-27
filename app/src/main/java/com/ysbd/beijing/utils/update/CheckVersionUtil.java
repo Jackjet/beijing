@@ -30,7 +30,7 @@ import okhttp3.Response;
 
 public class CheckVersionUtil {
 
-    private final String VERSION_NAME = "http://10.123.27.194:9910/APP/北京财政_";
+    private final String VERSION_NAME = "http://10.123.27.194:9910/APP/bjcz_";
     private int VERSION_CODE = 1;
     private static CheckVersionUtil checkVersionUtil;
     private ProgressDialog progressDialog;
@@ -60,7 +60,6 @@ public class CheckVersionUtil {
                     @Override
                     public void run() {
                         versionCall.notUpdate();
-                        versionCall.update(checkVersionUtil, url_);
                     }
                 });
             }
@@ -79,7 +78,6 @@ public class CheckVersionUtil {
                         @Override
                         public void run() {
                             versionCall.notUpdate();
-                            versionCall.update(checkVersionUtil, url_);
                         }
                     });
                 }

@@ -2,8 +2,12 @@
 <litepal>
     <dbname value="AddressBook" ></dbname>
 
-    <version value="2" ></version>
+    <version value="3" ></version>
     <list>
         <mapping class="com.ysbd.beijing.bean.AddressBean"></mapping>
+
+        <mapping class="com.ysbd.beijing.directorDesktop.bean.AttachmentBean"></mapping> 
+        <mapping class="com.ysbd.beijing.directorDesktop.bean.CatalogBean"></mapping>
+
     </list>
 </litepal>

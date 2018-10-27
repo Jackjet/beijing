@@ -27,7 +27,7 @@ android {
     }
     applicationVariants.all { variant ->
         variant.outputs.all { output ->
-            def fileName = "北京财政_" + "${variant.versionCode}.apk"
+            def fileName = "bjcz_" + "${variant.versionCode}.apk"
             def outFile = output.outputFile
             if (outFile != null && outFile.name.endsWith('.apk')) {
                 outputFileName = fileName
@@ -85,4 +85,5 @@ dependencies {
     implementation files('libs/tbs_sdk_thirdapp_v3.1.0.1034_43100_sharewithdownload_obfs_20170301_182143.jar')
     compile 'com.pgyersdk:sdk:2.8.4'
     implementation project(':indexlib')
+
 }

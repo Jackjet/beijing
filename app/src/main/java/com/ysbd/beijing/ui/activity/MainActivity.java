@@ -443,6 +443,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 startActivity(new Intent(this, LeanderScheduleActivity.class));
                 break;
             case R.id.tv_zhuomian:
+                Log.e("====","===");
                 //局长桌面
                 startActivity(new Intent(this, Desk2Activity.class));
                 break;
