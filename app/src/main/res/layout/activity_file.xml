@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen48"
+        android:background="@color/mTheme"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="@dimen/dimen48"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+
+                android:layout_width="@dimen/dimen24"
+                android:layout_height="@dimen/dimen24"
+                android:src="@mipmap/back" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:paddingRight="@dimen/dimen4"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="局长桌面"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen18" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/flAdd"
+            android:layout_width="@dimen/dimen48"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="(单位:亿元)"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen16" />
+        </FrameLayout>
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen4"
+        android:background="@color/holo_gray_bright">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal">
+            <com.ysbd.beijing.view.SeekEditText
+                android:id="@+id/seekEditText"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_while_360"
+                android:ellipsize="end"
+
+                android:hint="请输入搜索内容"
+                android:imeOptions="actionSearch"
+                android:paddingBottom="@dimen/dimen5"
+                android:paddingLeft="@dimen/dimen15"
+                android:paddingRight="@dimen/dimen15"
+                android:paddingTop="@dimen/dimen5"
+                android:singleLine="true"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/dimen15" />
+            <FrameLayout
+                android:id="@+id/flClose"
+                android:layout_width="@dimen/dimen40"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/dimen20"
+                    android:layout_height="@dimen/dimen20"
+                    android:src="@drawable/clear_pwd"/>
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+        <LinearLayout
+            android:id="@+id/nullLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dimen100"
+                android:layout_height="@dimen/dimen100"
+                android:layout_marginBottom="@dimen/dimen10"
+                android:src="@drawable/sub_null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无数据"
+                android:textColor="@color/silver"
+                android:textSize="@dimen/dimen18" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

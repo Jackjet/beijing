@@ -1,22 +1,17 @@
 package com.ysbd.beijing.ui.activity;
 
 import android.app.AlertDialog;
-import android.content.ClipData;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Looper;
 import android.os.Message;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.ClipboardManager;
 import android.text.TextUtils;
 import android.util.Log;
-import android.util.TypedValue;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -33,15 +28,14 @@ import com.pgyersdk.update.PgyUpdateManager;
 import com.pgyersdk.update.UpdateManagerListener;
 import com.ysbd.beijing.BaseActivity;
 import com.ysbd.beijing.R;
+import com.ysbd.beijing.directorDesktop.Desk2Activity;
 import com.ysbd.beijing.recyclerView.OnBindView;
 import com.ysbd.beijing.recyclerView.OnViewClickListener;
 import com.ysbd.beijing.recyclerView.RecyclerViewAdapter;
 import com.ysbd.beijing.ui.bean.TodoBean;
-import com.ysbd.beijing.utils.CheckVersionUtil;
+import com.ysbd.beijing.utils.update.CheckVersionUtil;
 import com.ysbd.beijing.utils.Constants;
-import com.ysbd.beijing.utils.DBUtils;
 import com.ysbd.beijing.utils.DateFormatUtil;
-import com.ysbd.beijing.utils.Glide.GlideUtils;
 import com.ysbd.beijing.utils.SpUtils;
 import com.ysbd.beijing.utils.ToastUtil;
 import com.ysbd.beijing.utils.WebServiceUtils;
@@ -78,6 +72,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        Configuration config = getResources().getConfiguration();
+        int smallestScreenWidth = config.smallestScreenWidthDp;
+        SpUtils.getInstance().setScreenWidth(smallestScreenWidth);
         tvAddress = findViewById(R.id.tv_address_book);
         todoRefresh = findViewById(R.id.refresh);
         lingdaoricheng = findViewById(R.id.tv_richeng);
@@ -113,16 +110,38 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         initClassTitle();
         initTodo();
         initBbs();
-        checkVersion(true);
+//        checkVersion(true);
         CheckVersionUtil.getInstance().check(new CheckVersionUtil.VersionCall() {
+
             @Override
-            public void update(String url) {
-                Log.e("版本更新",url);
+            public void update(final CheckVersionUtil checkVersionUtil, final String url) {
+                Log.e("版本更新", url);
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("新版本提示")
+                        .setMessage("是否下载更新？")
+                        .setPositiveButton(
+                                "确定",
+                                new DialogInterface.OnClickListener() {
+
+                                    @Override
+                                    public void onClick(
+                                            DialogInterface dialog, int which) {
+                                        checkVersionUtil.downApk(url, "北京财政.apk", MainActivity.this);
+                                    }
+                                })
+                        .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.dismiss();
+                                handler.sendEmptyMessage(0);
+                            }
+                        }).show();
+
             }
 
             @Override
             public void notUpdate() {
-                Log.e("版本更新","无需更新");
+                Log.e("版本更新", "无需更新");
             }
         });
 
@@ -148,7 +167,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                                     .setPositiveButton(
                                             "确定",
                                             new DialogInterface.OnClickListener() {
-
 
                                                 @Override
                                                 public void onClick(
@@ -353,24 +371,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     }
 
-    private void getTodoRedGreenData(final String instanceGuid, final String userId) {
-        Log.e("====instanceGuid", instanceGuid + "-----");
-        Log.e("====userId", userId + "-----");
-        if (!TextUtils.isEmpty(instanceGuid)) {
-            new Thread() {
-                @Override
-                public void run() {
-                    super.run();
-                    String s = WebServiceUtils.getInstance().findTodoRedGreenFiles(instanceGuid, userId);
-                    Log.e("=========", s + "-----");
-//                List<TodoBean> todoBeans = new Gson().fromJson(s, new TypeToken<List<TodoBean>>() {
-//                }.getType());
-                }
-            }.start();
-        }
-    }
-
-
     Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -425,7 +425,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     }
 
 
-    @OnClick({R.id.logoutClick, R.id.tv_todo_more, R.id.tv_richeng, R.id.set})
+    @OnClick({R.id.logoutClick, R.id.tv_todo_more,R.id.tv_zhuomian, R.id.tv_richeng, R.id.set})
     public void onViewClicked(View view) {
         setLiveTime();
         switch (view.getId()) {
@@ -441,6 +441,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.tv_richeng:
                 startActivity(new Intent(this, LeanderScheduleActivity.class));
+                break;
+            case R.id.tv_zhuomian:
+                //局长桌面
+                startActivity(new Intent(this, Desk2Activity.class));
                 break;
             case R.id.set:
                 startActivity(new Intent(this, SettingActivity.class));

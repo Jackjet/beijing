@@ -81,6 +81,11 @@
         <activity android:name=".ui.activity.SettingActivity" />
         <activity android:name=".ui.activity.PersonActivity" />
         <activity android:name=".ui.activity.WebActivity"></activity>
+
+        <activity android:name=".directorDesktop.Desk2Activity">
+        </activity>
+        <activity android:name=".directorDesktop.DeskTopActivity"/>
+        <activity android:name=".directorDesktop.FileActivity" />
     </application>
 
 </manifest>

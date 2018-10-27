@@ -101,6 +101,21 @@ public class FileUtils {
             return fileDir;
         }
     }
+    public File makeDir(String dir) {
+        String dirPath=path+File.separator+dir;
+        File fileDir = new File(dirPath);
+        if (fileDir.exists()) {
+            return fileDir;
+        } else {
+            fileDir.mkdirs();
+            return fileDir;
+        }
+    }
+
+    public String getExtension(String name){
+        String end=name.substring(name.lastIndexOf(".") + 1,name.length()).toLowerCase();
+        return end;
+    }
 
     public boolean isFileExists(String fileName) {
         String path = getInstance().makeDir().getPath() + File.separator + fileName;

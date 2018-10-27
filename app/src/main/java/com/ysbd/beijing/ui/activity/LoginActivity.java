@@ -3,10 +3,12 @@ package com.ysbd.beijing.ui.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.text.ClipboardManager;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
@@ -55,7 +57,6 @@ public class LoginActivity extends BaseActivity {
     @BindView(R.id.ll_b)
     LinearLayout llB;
 
-
     private String code;
 
     @Override
@@ -63,6 +64,9 @@ public class LoginActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+        Configuration config = getResources().getConfiguration();
+        int smallestScreenWidth = config.smallestScreenWidthDp;
+        SpUtils.getInstance().setScreenWidth(smallestScreenWidth);
         final int pageMargin = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4, getResources().getDisplayMetrics());
         llB.setVisibility(View.GONE);
         btReset.setOnLongClickListener(new View.OnLongClickListener() {

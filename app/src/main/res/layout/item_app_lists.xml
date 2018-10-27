@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="#fff"
+    android:orientation="vertical">
+    <!--android:background="@drawable/bg_strok"-->
+    <com.ysbd.beijing.view.ImageSquareView
+        android:id="@+id/itemAppLists_image"
+        android:layout_width="@dimen/dimen40"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen15"
+        android:layout_marginLeft="@dimen/dimen20"
+        android:layout_marginRight="@dimen/dimen20"
+        android:src="@drawable/class_logo" />
+
+    <TextView
+        android:id="@+id/itemAppLists_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dimen3"
+        android:layout_marginBottom="@dimen/dimen8"
+        android:text="类别"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"
+        android:textSize="@dimen/dimen14" />
+</LinearLayout>

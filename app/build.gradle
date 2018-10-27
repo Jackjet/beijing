@@ -8,8 +8,8 @@ android {
         applicationId "com.ysbd.beijing"
         minSdkVersion 19
         targetSdkVersion 27
-        versionCode 34
-        versionName "1.4.4"
+        versionCode 1
+        versionName "1.0.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
@@ -27,7 +27,7 @@ android {
     }
     applicationVariants.all { variant ->
         variant.outputs.all { output ->
-            def fileName = "北京财政_" + "${variant.versionName}.apk"
+            def fileName = "北京财政_" + "${variant.versionCode}.apk"
             def outFile = output.outputFile
             if (outFile != null && outFile.name.endsWith('.apk')) {
                 outputFileName = fileName
@@ -84,6 +84,5 @@ dependencies {
     compile 'com.github.Awent:PhotoPick-Master:v1.095'
     implementation files('libs/tbs_sdk_thirdapp_v3.1.0.1034_43100_sharewithdownload_obfs_20170301_182143.jar')
     compile 'com.pgyersdk:sdk:2.8.4'
-    implementation 'cn.lsmya.apkupdate:apkupdate:1.0.5'
     implementation project(':indexlib')
 }

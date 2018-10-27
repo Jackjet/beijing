@@ -218,6 +218,17 @@
                     android:visibility="gone" />
 
                 <TextView
+                    android:id="@+id/tv_zhuomian"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/richeng_bg"
+                    android:gravity="center"
+                    android:text="局长桌面"
+                    android:textColor="#000"
+                    android:textSize="@dimen/dimen15" />
+
+                <TextView
                     android:id="@+id/tv_richeng"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"

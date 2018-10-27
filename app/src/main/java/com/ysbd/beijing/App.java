@@ -90,8 +90,8 @@ public class App extends RHMOApplication {
     }
 
     private void enableOfflineActivation() {
-//        LicenseConfiguration.enableOffline("http://10.123.27.194:8080", OFFLINE_SERVER_CERT, true);
-        LicenseConfiguration.enableOffline("http://172.10.48.92:8080", OFFLINE_SERVER_CERT, true);
+        LicenseConfiguration.enableOffline("http://10.123.27.195:8080", OFFLINE_SERVER_CERT, true);
+//        LicenseConfiguration.enableOffline("http://172.10.48.92:8080", OFFLINE_SERVER_CERT, true);
     }
 
 

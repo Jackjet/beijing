@@ -11,16 +11,11 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
+import com.google.gson.util.VersionUtils;
 import com.ysbd.beijing.autoExist.ScreenObserver;
 import com.ysbd.beijing.autoExist.TimeoutService;
-import com.ysbd.beijing.ui.activity.LoginActivity;
-import com.ysbd.beijing.ui.activity.MainActivity;
 import com.ysbd.beijing.utils.Constants;
 import com.ysbd.beijing.utils.WebServiceUtils;
-
-import cn.lsmya.apkupdate.VersionBeen;
-import cn.lsmya.apkupdate.VersionListener;
-import cn.lsmya.apkupdate.VersionUtils;
 
 /**
  * Created by lcjing on 2018/8/13.
@@ -58,21 +53,6 @@ public class BaseActivity extends AppCompatActivity{
 
         }
 
-    }
-
-
-    public void checkVersion(){
-        VersionUtils.with(this).checkVersion(new VersionListener() {
-            @Override
-            public void onUpdate(VersionBeen been, String response) {
-                VersionUtils.with(BaseActivity.this).downApk(been.getApkUrl(),"北京财政局v"+App.getAppVersionName(BaseActivity.this)+"apk.apk");
-            }
-
-            @Override
-            public void onNotUpdate() {
-
-            }
-        });
     }
 
     /**

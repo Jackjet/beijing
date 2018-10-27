@@ -40,11 +40,18 @@ public class SpUtils {
     public void setAddressVisiable(boolean editable) {
         sp.edit().putBoolean("addressVisiable", editable).apply();
     }
+    public void setScreenWidth(int screenWidth){
+        sp.edit().putInt("screenWidth", screenWidth).apply();
+    }
+
+    public int getScreenWidth(){
+        return sp.getInt("screenWidth", 360);
+    }
 
 
     public String getIP() {
-        return "http://172.10.48.92:9998/risenetoabjcz";
-//        return sp.getString("ip", "http://10.123.27.194:9910");
+//        return "http://172.10.48.92:9998/risenetoabjcz";
+        return sp.getString("ip", "http://10.123.27.194:9910");
     }//http://172.28.68.48:9910
 
     public void setIp(String ip) {
