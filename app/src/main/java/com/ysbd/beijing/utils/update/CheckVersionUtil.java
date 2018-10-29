@@ -31,7 +31,7 @@ import okhttp3.Response;
 public class CheckVersionUtil {
 
     private final String VERSION_NAME = "http://10.123.27.194:9910/app/bjcz_";
-    private int VERSION_CODE = 2;
+    private int VERSION_CODE = 1;
     private static CheckVersionUtil checkVersionUtil;
     private ProgressDialog progressDialog;
     private Handler mHandler;
@@ -51,7 +51,7 @@ public class CheckVersionUtil {
         final String url_ = VERSION_NAME + (VERSION_CODE + 1) + ".apk";
         OkHttpClient okHttpClient = new OkHttpClient();
         final Request request = new Request.Builder()
-                .url(VERSION_NAME)
+                .url(url_)
                 .build();
         okHttpClient.newCall(request).enqueue(new Callback() {
             @Override

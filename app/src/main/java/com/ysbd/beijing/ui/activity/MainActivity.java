@@ -1,7 +1,9 @@
 package com.ysbd.beijing.ui.activity;
 
 import android.app.AlertDialog;
+import android.content.ClipboardManager;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -27,6 +29,7 @@ import com.google.gson.reflect.TypeToken;
 import com.pgyersdk.javabean.AppBean;
 import com.pgyersdk.update.PgyUpdateManager;
 import com.pgyersdk.update.UpdateManagerListener;
+import com.ysbd.beijing.App;
 import com.ysbd.beijing.BaseActivity;
 import com.ysbd.beijing.R;
 import com.ysbd.beijing.directorDesktop.Desk2Activity;
@@ -152,7 +155,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 Log.e("版本更新", "无需更新");
             }
         });
-
     }
 
 
