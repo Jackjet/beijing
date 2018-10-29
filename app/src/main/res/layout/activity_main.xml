@@ -226,7 +226,8 @@
                     android:gravity="center"
                     android:text="局长桌面"
                     android:textColor="#000"
-                    android:textSize="@dimen/dimen15" />
+                    android:textSize="@dimen/dimen15"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/tv_richeng"

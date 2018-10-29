@@ -27,8 +27,9 @@ public class WebActivity extends BaseActivity {
             }
         });
         url = getIntent().getStringExtra("url");
-        url = "http://10.123.27.193:80/jntz/index_1077_app_czj.htm";
-        webView.loadUrl(url);
+        String substring = url.substring(0, url.lastIndexOf(".")) + "_app_czj.html";
+
+        webView.loadUrl(substring);
         //自己使用屏幕大小
         webView.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
         webView.getSettings().setLoadWithOverviewMode(true);

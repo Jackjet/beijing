@@ -421,10 +421,10 @@ public class BaseFormFragment extends BaseFragment implements CommentAdapter.Com
             }
         }
         try {
-            ClipboardManager clipboardManager = (ClipboardManager) getContext().getSystemService(Context.CLIPBOARD_SERVICE);
-            //添加ClipData对象到剪切板中
-            clipboardManager.setText(url);
-            ToastUtil.show("文件地址已拷贝到剪切板", getContext());
+//            ClipboardManager clipboardManager = (ClipboardManager) getContext().getSystemService(Context.CLIPBOARD_SERVICE);
+//            //添加ClipData对象到剪切板中
+//            clipboardManager.setText(url);
+//            ToastUtil.show("文件地址已拷贝到剪切板", getContext());
             fileName = attachmentName;
 //        if (WebServiceUtils.HOST == WebServiceUtils.HOST1) {
 //            url = url.replace("218.60.41.112", "192.168.0.102");

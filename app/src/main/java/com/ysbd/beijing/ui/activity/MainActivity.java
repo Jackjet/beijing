@@ -1,6 +1,7 @@
 package com.ysbd.beijing.ui.activity;
 
 import android.app.AlertDialog;
+import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -64,7 +65,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 //    private RecyclerView bbsRecyclerView;
 
 
-    private TextView tvAddress;
+    private TextView tvAddress, tvZhuomian;
     private WebView webView;
 
     @Override
@@ -76,6 +77,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         int smallestScreenWidth = config.smallestScreenWidthDp;
         SpUtils.getInstance().setScreenWidth(smallestScreenWidth);
         tvAddress = findViewById(R.id.tv_address_book);
+        tvZhuomian = findViewById(R.id.tv_zhuomian);
         todoRefresh = findViewById(R.id.refresh);
         lingdaoricheng = findViewById(R.id.tv_richeng);
         tvAddress.setOnClickListener(this);
@@ -105,7 +107,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                     userName.equals("师淑英") || userName.equals("汪刚") || userName.equals("张宏宇")) {
                 lingdaoricheng.setVisibility(View.VISIBLE);
             }
+            if (userName.equals("吴素芳") || userName.equals("徐蘅") || userName.equals("王婴") ||
+                    userName.equals("于学强") || userName.equals("赵彦明") || userName.equals("韩杰") ||
+                    userName.equals("师淑英") || userName.equals("汪刚") || userName.equals("张宏宇")) {
+                tvZhuomian.setVisibility(View.VISIBLE);
+            }
         }
+
 
         initClassTitle();
         initTodo();
@@ -405,7 +413,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         //支持JavaScript
         settings.setJavaScriptEnabled(true);
 //        webView.loadUrl("http://10.123.27.193:80//jntz/index_1077.htm");
-        webView.loadUrl("http://10.123.27.193:80/jntz/index_1077.htm");
+        webView.loadUrl("http://10.123.27.193/jntz/index_1077.htm");
         //自己使用屏幕大小
         webView.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
         webView.getSettings().setLoadWithOverviewMode(true);
@@ -425,7 +433,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     }
 
 
-    @OnClick({R.id.logoutClick, R.id.tv_todo_more,R.id.tv_zhuomian, R.id.tv_richeng, R.id.set})
+    @OnClick({R.id.logoutClick, R.id.tv_todo_more, R.id.tv_zhuomian, R.id.tv_richeng, R.id.set})
     public void onViewClicked(View view) {
         setLiveTime();
         switch (view.getId()) {
@@ -443,9 +451,18 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 startActivity(new Intent(this, LeanderScheduleActivity.class));
                 break;
             case R.id.tv_zhuomian:
-                Log.e("====","===");
                 //局长桌面
-                startActivity(new Intent(this, Desk2Activity.class));
+                try {
+                    Intent intent1 = new Intent();
+                    ComponentName cmp = new ComponentName("com.ysbd.financialdesk", "com.ysbd.financialdesk.directorDesktop.Desk2Activity");
+                    intent1.setAction(Intent.ACTION_MAIN);
+                    intent1.addCategory(Intent.CATEGORY_LAUNCHER);
+                    intent1.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    intent1.setComponent(cmp);
+                    startActivity(intent1);
+                } catch (Exception e) {
+
+                }
                 break;
             case R.id.set:
                 startActivity(new Intent(this, SettingActivity.class));
