@@ -20,6 +20,7 @@ import com.google.gson.Gson;
 import com.ysbd.beijing.App;
 import com.ysbd.beijing.BaseActivity;
 import com.ysbd.beijing.R;
+import com.ysbd.beijing.base.BaseLoginActivity;
 import com.ysbd.beijing.ui.bean.LoginResBean;
 import com.ysbd.beijing.utils.CodeUtils;
 import com.ysbd.beijing.utils.Constants;
@@ -38,7 +39,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class LoginActivity extends BaseActivity {
+public class LoginActivity extends BaseLoginActivity {
     SharedPreferences sp;
     @BindView(R.id.et_name)
     EditText etName;

@@ -179,7 +179,6 @@ public class DataActivity extends BaseActivity implements QueryHelper {
         classAdapter.setOnItemClick(new RecyclerViewAdapter.OnItemClickListener() {
             @Override
             public void onViewClick(int position) {
-                setLiveTime();
                 selectPosition = position;
                 chooseFragment(classTitle.get(position));
 //                if (classTitle.get(position).equals("表单查询")) {

@@ -308,7 +308,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 if (position + 1 > showList.size()) {
                     return;
                 }
-                setLiveTime();
                 Intent intent = new Intent(MainActivity.this, FormActivity.class);
                 String tar = showList.get(position).getTODO_TARGETURL();
                 int startTag = tar.indexOf("instanceGUID=") + 13;
@@ -437,7 +436,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     @OnClick({R.id.logoutClick, R.id.tv_todo_more, R.id.tv_zhuomian, R.id.tv_richeng, R.id.set})
     public void onViewClicked(View view) {
-        setLiveTime();
         switch (view.getId()) {
             case R.id.logoutClick:
                 finish();

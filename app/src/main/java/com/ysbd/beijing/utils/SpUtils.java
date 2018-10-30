@@ -40,11 +40,12 @@ public class SpUtils {
     public void setAddressVisiable(boolean editable) {
         sp.edit().putBoolean("addressVisiable", editable).apply();
     }
-    public void setScreenWidth(int screenWidth){
+
+    public void setScreenWidth(int screenWidth) {
         sp.edit().putInt("screenWidth", screenWidth).apply();
     }
 
-    public int getScreenWidth(){
+    public int getScreenWidth() {
         return sp.getInt("screenWidth", 360);
     }
 
@@ -66,5 +67,13 @@ public class SpUtils {
 
     public String getUserId() {
         return sp.getString(Constants.USER_ID, "");
+    }
+
+    public void setTime(long time) {
+        sp.edit().putLong("caozuoTime", time).apply();
+    }
+
+    public long getTime() {
+        return sp.getLong("caozuoTime", System.currentTimeMillis());
     }
 }
