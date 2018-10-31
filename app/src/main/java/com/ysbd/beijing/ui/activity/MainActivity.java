@@ -76,6 +76,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        SpUtils.getInstance().setTime(System.currentTimeMillis());
         Configuration config = getResources().getConfiguration();
         int smallestScreenWidth = config.smallestScreenWidthDp;
         SpUtils.getInstance().setScreenWidth(smallestScreenWidth);

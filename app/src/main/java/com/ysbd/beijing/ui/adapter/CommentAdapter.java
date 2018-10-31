@@ -77,6 +77,10 @@ public class CommentAdapter extends LinearLayoutBaseAdapter {
 //            holder.tvParentName.setText(frameName);
             if (!editable || opinionModel.getOpinionFrameMark() == null || opinionModel.getOpinionFrameMark().length() < 1 || !opinionModel.isAddable()) {
                 holder.llParent.setVisibility(View.GONE);
+                Log.e("错误11",String.valueOf(editable));
+                Log.e("错误222",String.valueOf(opinionModel.getOpinionFrameMark()));
+                Log.e("错误333",String.valueOf(opinionModel.getOpinionFrameMark().length() < 1 ));
+                Log.e("错误444",String.valueOf(opinionModel.isAddable()));
             }
             holder.flAdd.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -224,7 +224,7 @@
                     android:layout_marginTop="15dp"
                     android:background="@drawable/richeng_bg"
                     android:gravity="center"
-                    android:text="局长桌面"
+                    android:text="资料库"
                     android:textColor="#000"
                     android:textSize="@dimen/dimen15"
                     android:visibility="gone" />
@@ -246,7 +246,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_marginTop="15dp"
-                    android:background="@drawable/contact_bg"
+                    android:background="@drawable/richeng_bg"
                     android:gravity="center"
                     android:text="通讯录"
                     android:textColor="#000"

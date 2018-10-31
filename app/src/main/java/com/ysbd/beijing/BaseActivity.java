@@ -82,7 +82,7 @@ public class BaseActivity extends AppCompatActivity {
             sp.edit().putBoolean(Constants.IS_LOGIN, false).apply();
             mHandler_.post(runnable);
         } else {
-            SpUtils.getInstance().setTime(l);
+            SpUtils.getInstance().setTime(System.currentTimeMillis());
         }
     }
 

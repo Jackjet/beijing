@@ -95,7 +95,7 @@ public class BaseFormFragment extends BaseFragment implements CommentAdapter.Com
     }
 
     private void initComment() {
-        boolean editable = "todo".equals(actor);
+        boolean editable = "todo".equals(actor) || "待办".equals(actor);
         opinionMap = new HashMap<>();
         adapterMap = new HashMap<>();
         for (int i = 0; i < frameMap.size(); i++) {
